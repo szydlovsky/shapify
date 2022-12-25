@@ -1,9 +1,6 @@
 //
 //  DummyViewcontroller.swift
 //  Shapify
-//
-//  Created by Alex on 25/12/2022.
-//
 
 import UIKit
 

@@ -1,13 +1,10 @@
 //
 //  AuthManager.swift
 //  Shapify
-//
-//  Created by Alex on 24/12/2022.
-//
 
 import Foundation
 
-class AuthManager {
+final class AuthManager {
     
     enum AuthManagerError: String, Error {
         case baseTokenURLMissed

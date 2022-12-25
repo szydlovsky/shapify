@@ -1,14 +1,11 @@
 //
 //  AuthViewController.swift
 //  Shapify
-//
-//  Created by Alex on 25/12/2022.
-//
 
 import UIKit
 import WebKit
 
-class AuthViewController: UIViewController {
+final class AuthViewController: UIViewController {
 
     private let webView: WKWebView = {
         let config = WKWebViewConfiguration()
