@@ -17,6 +17,7 @@
 		84459D4D294A8EEB00429C3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84459D45294A8EEA00429C3D /* Assets.xcassets */; };
 		84459D4E294A8EEB00429C3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84459D46294A8EEA00429C3D /* AppDelegate.swift */; };
 		84459D4F294A8EEB00429C3D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84459D47294A8EEB00429C3D /* ViewController.swift */; };
+		848BC8862958F5E90090B4A8 /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848BC8852958F5E90090B4A8 /* ColorExtensions.swift */; };
 		84E6688F294B27B4002A1587 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84459D41294A8EE900429C3D /* LaunchScreen.storyboard */; };
 		84E66890294B27B4002A1587 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84459D43294A8EE900429C3D /* Main.storyboard */; };
 		84E66893294B285F002A1587 /* Spoof-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84E66891294B285F002A1587 /* Spoof-Regular.ttf */; };
@@ -39,6 +40,7 @@
 		84459D45294A8EEA00429C3D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84459D46294A8EEA00429C3D /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84459D47294A8EEB00429C3D /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		848BC8852958F5E90090B4A8 /* ColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtensions.swift; sourceTree = "<group>"; };
 		84E66891294B285F002A1587 /* Spoof-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Spoof-Regular.ttf"; sourceTree = "<group>"; };
 		84E66892294B285F002A1587 /* Spoof-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Spoof-Bold.ttf"; sourceTree = "<group>"; };
 		84E66896294B28C6002A1587 /* FontExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontExtensions.swift; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				84E66896294B28C6002A1587 /* FontExtensions.swift */,
+				848BC8852958F5E90090B4A8 /* ColorExtensions.swift */,
 			);
 			path = Supplementary;
 			sourceTree = "<group>";
@@ -210,6 +213,7 @@
 				3A5610DA2957AE1F005F9760 /* Constants.swift in Sources */,
 				84459D4F294A8EEB00429C3D /* ViewController.swift in Sources */,
 				84459D48294A8EEB00429C3D /* SceneDelegate.swift in Sources */,
+				848BC8862958F5E90090B4A8 /* ColorExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
