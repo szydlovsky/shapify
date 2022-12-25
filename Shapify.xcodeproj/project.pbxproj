@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A5610D72957A8C3005F9760 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5610D62957A8C3005F9760 /* AuthManager.swift */; };
+		3A5610DA2957AE1F005F9760 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5610D92957AE1E005F9760 /* Constants.swift */; };
+		3A5610DC29586F44005F9760 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5610DB29586F44005F9760 /* AuthViewController.swift */; };
+		3A5610DF29587EE5005F9760 /* AuthResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5610DE29587EE5005F9760 /* AuthResponse.swift */; };
+		3A5610E329588211005F9760 /* DummyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5610E229588211005F9760 /* DummyViewController.swift */; };
 		84459D48294A8EEB00429C3D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84459D3C294A8EE800429C3D /* SceneDelegate.swift */; };
 		84459D49294A8EEB00429C3D /* Shapify.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 84459D3D294A8EE900429C3D /* Shapify.xcdatamodeld */; };
 		84459D4D294A8EEB00429C3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84459D45294A8EEA00429C3D /* Assets.xcassets */; };
@@ -20,6 +25,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3A5610D62957A8C3005F9760 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		3A5610D92957AE1E005F9760 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		3A5610DB29586F44005F9760 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		3A5610DE29587EE5005F9760 /* AuthResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResponse.swift; sourceTree = "<group>"; };
+		3A5610E229588211005F9760 /* DummyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyViewController.swift; sourceTree = "<group>"; };
 		84459D22294A8E0700429C3D /* Shapify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shapify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84459D3C294A8EE800429C3D /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		84459D3E294A8EE900429C3D /* Shapify.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Shapify.xcdatamodel; sourceTree = "<group>"; };
@@ -45,9 +55,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A5610D52957A8B6005F9760 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				3A5610D62957A8C3005F9760 /* AuthManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		3A5610D82957AE00005F9760 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				84E66892294B285F002A1587 /* Spoof-Bold.ttf */,
+				84E66891294B285F002A1587 /* Spoof-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		3A5610DD29587ED8005F9760 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3A5610DE29587EE5005F9760 /* AuthResponse.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		84459D19294A8E0700429C3D = {
 			isa = PBXGroup;
 			children = (
+				3A5610E229588211005F9760 /* DummyViewController.swift */,
+				3A5610DD29587ED8005F9760 /* Models */,
+				3A5610DB29586F44005F9760 /* AuthViewController.swift */,
+				3A5610D92957AE1E005F9760 /* Constants.swift */,
+				3A5610D52957A8B6005F9760 /* Managers */,
 				84E66895294B28B4002A1587 /* Supplementary */,
 				84459D50294A91DF00429C3D /* Common */,
 				84459D47294A8EEB00429C3D /* ViewController.swift */,
@@ -66,8 +106,7 @@
 		84459D50294A91DF00429C3D /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				84E66892294B285F002A1587 /* Spoof-Bold.ttf */,
-				84E66891294B285F002A1587 /* Spoof-Regular.ttf */,
+				3A5610D82957AE00005F9760 /* Fonts */,
 				84459D46294A8EEA00429C3D /* AppDelegate.swift */,
 				84459D45294A8EEA00429C3D /* Assets.xcassets */,
 				84459D41294A8EE900429C3D /* LaunchScreen.storyboard */,
@@ -162,8 +201,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				84459D4E294A8EEB00429C3D /* AppDelegate.swift in Sources */,
+				3A5610D72957A8C3005F9760 /* AuthManager.swift in Sources */,
 				84459D49294A8EEB00429C3D /* Shapify.xcdatamodeld in Sources */,
 				84E66897294B28C6002A1587 /* FontExtensions.swift in Sources */,
+				3A5610DF29587EE5005F9760 /* AuthResponse.swift in Sources */,
+				3A5610E329588211005F9760 /* DummyViewController.swift in Sources */,
+				3A5610DC29586F44005F9760 /* AuthViewController.swift in Sources */,
+				3A5610DA2957AE1F005F9760 /* Constants.swift in Sources */,
 				84459D4F294A8EEB00429C3D /* ViewController.swift in Sources */,
 				84459D48294A8EEB00429C3D /* SceneDelegate.swift in Sources */,
 			);
