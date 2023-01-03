@@ -22,6 +22,7 @@
 		84E66893294B285F002A1587 /* Spoof-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84E66891294B285F002A1587 /* Spoof-Regular.ttf */; };
 		84E66894294B285F002A1587 /* Spoof-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84E66892294B285F002A1587 /* Spoof-Bold.ttf */; };
 		84E66897294B28C6002A1587 /* FontExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E66896294B28C6002A1587 /* FontExtensions.swift */; };
+		8670D27529635F7600885A39 /* RoundedButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8670D27429635F7600885A39 /* RoundedButtonExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		84E66891294B285F002A1587 /* Spoof-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Spoof-Regular.ttf"; sourceTree = "<group>"; };
 		84E66892294B285F002A1587 /* Spoof-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Spoof-Bold.ttf"; sourceTree = "<group>"; };
 		84E66896294B28C6002A1587 /* FontExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontExtensions.swift; sourceTree = "<group>"; };
+		8670D27429635F7600885A39 /* RoundedButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButtonExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,9 +123,18 @@
 		84E66895294B28B4002A1587 /* Supplementary */ = {
 			isa = PBXGroup;
 			children = (
+				8670D27329635EDC00885A39 /* Button */,
 				84E66896294B28C6002A1587 /* FontExtensions.swift */,
 			);
 			path = Supplementary;
+			sourceTree = "<group>";
+		};
+		8670D27329635EDC00885A39 /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				8670D27429635F7600885A39 /* RoundedButtonExtension.swift */,
+			);
+			path = Button;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -206,6 +217,7 @@
 				84E66897294B28C6002A1587 /* FontExtensions.swift in Sources */,
 				3A5610DF29587EE5005F9760 /* AuthResponse.swift in Sources */,
 				3A5610E329588211005F9760 /* DummyViewController.swift in Sources */,
+				8670D27529635F7600885A39 /* RoundedButtonExtension.swift in Sources */,
 				3A5610DC29586F44005F9760 /* AuthViewController.swift in Sources */,
 				3A5610DA2957AE1F005F9760 /* Constants.swift in Sources */,
 				84459D4F294A8EEB00429C3D /* ViewController.swift in Sources */,
