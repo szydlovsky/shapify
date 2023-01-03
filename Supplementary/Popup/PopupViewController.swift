@@ -32,11 +32,15 @@ final class PopupViewController: UIViewController {
     override func viewDidLoad() {
         mainView.onButtonPress = { [weak self] in
             self?.model.action?()
-            self?.dismiss(animated: true)
+            DispatchQueue.main.async {
+                self?.dismiss(animated: true)
+            }
         }
         
         mainView.onClosePress = { [weak self] in
-            self?.dismiss(animated: true)
+            DispatchQueue.main.async {
+                self?.dismiss(animated: true)
+            }
         }
         
         mainView.configure(
@@ -48,7 +52,9 @@ final class PopupViewController: UIViewController {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         let touch = touches.first
         if touch?.view != mainView.containerView {
-            dismiss(animated: true)
+            DispatchQueue.main.async { [weak self] in
+                self?.dismiss(animated: true)
+            }
         }
     }
 }

@@ -80,8 +80,8 @@ final class PopupView: BaseView {
             closeButton.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -12)
         ])
         
-        button.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(buttonPressed)))
-        closeButton.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(closePressed)))
+        button.addTarget(self, action: #selector(buttonPressed), for: .touchUpInside)
+        closeButton.addTarget(self, action: #selector(closePressed), for: .touchUpInside)
     }
     
     @objc private func buttonPressed() {
