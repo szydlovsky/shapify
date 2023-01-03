@@ -10,13 +10,13 @@ extension UIButton {
             NSMutableAttributedString(
                 string: title,
                 attributes: [
-                    NSAttributedString.Key.font: UIFont.appFont(ofSize: 20, isBold: false),
+                    NSAttributedString.Key.font: UIFont.appFont(ofSize: 20, isBold: true),
                     NSAttributedString.Key.foregroundColor: UIColor.white
         ])
         self.translatesAutoresizingMaskIntoConstraints = false
         self.setAttributedTitle(buttonTitle, for: .normal)
-        self.heightAnchor.constraint(equalToConstant: 60).isActive = true
-        self.backgroundColor = UIColor.black
+        self.heightAnchor.constraint(equalToConstant: 64).isActive = true
+        self.backgroundColor = UIColor.shapifyDarkGreen
         self.tintColor = .clear
         self.layer.cornerRadius = 30
     }
