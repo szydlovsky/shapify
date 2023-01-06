@@ -2,6 +2,8 @@
 //  Constants.swift
 //  Shapify
 
-import Foundation
+import UIKit
 
-
+public enum Constants {
+    static let defaultMargin: CGFloat = 20.0
+}

@@ -25,4 +25,7 @@ extension UIViewController {
         present(vc, animated: true)
     }
     
+    func push(_ vc: UIViewController, animated: Bool = true) {
+        navigationController?.pushViewController(vc, animated: animated)
+    }
 }
