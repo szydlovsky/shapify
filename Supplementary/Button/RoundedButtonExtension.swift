@@ -5,7 +5,7 @@
 import UIKit
 
 extension UIButton {
-    func setUpRoundedButton(title: String) {
+    func setUpRoundedButton(title: String, withSpotiIcon: Bool = false) {
         let buttonTitle =
             NSMutableAttributedString(
                 string: title,
@@ -15,9 +15,24 @@ extension UIButton {
         ])
         self.translatesAutoresizingMaskIntoConstraints = false
         self.setAttributedTitle(buttonTitle, for: .normal)
-        self.heightAnchor.constraint(equalToConstant: 64).isActive = true
-        self.backgroundColor = UIColor.shapifyDarkGreen
+        self.setHeight(64)
+        self.backgroundColor = UIColor.shapifySuperDarkGreen
         self.tintColor = .clear
         self.layer.cornerRadius = 30
+        
+        if withSpotiIcon {
+            let imgView = UIImageView().then {
+                $0.translatesAutoresizingMaskIntoConstraints = false
+                $0.setHeight(37)
+                $0.setWidth(37)
+                $0.contentMode = .scaleAspectFit
+                $0.image = UIImage(named: "spotiIcon")
+            }
+            addSubview(imgView)
+            NSLayoutConstraint.activate([
+                imgView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -15),
+                imgView.centerYAnchor.constraint(equalTo: self.centerYAnchor)
+            ])
+        }
     }
 }

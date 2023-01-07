@@ -16,7 +16,9 @@
 		84459D49294A8EEB00429C3D /* Shapify.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 84459D3D294A8EE900429C3D /* Shapify.xcdatamodeld */; };
 		84459D4D294A8EEB00429C3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84459D45294A8EEA00429C3D /* Assets.xcassets */; };
 		84459D4E294A8EEB00429C3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84459D46294A8EEA00429C3D /* AppDelegate.swift */; };
-		84459D4F294A8EEB00429C3D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84459D47294A8EEB00429C3D /* ViewController.swift */; };
+		84704DC22968AD760008BF40 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84704DC12968AD760008BF40 /* SignInViewController.swift */; };
+		84704DC42968AD9E0008BF40 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84704DC32968AD9E0008BF40 /* SignInView.swift */; };
+		84704DC62968B19F0008BF40 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84704DC52968B19F0008BF40 /* UIViewExtensions.swift */; };
 		848BC8862958F5E90090B4A8 /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848BC8852958F5E90090B4A8 /* ColorExtensions.swift */; };
 		848BC8882958F9F70090B4A8 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848BC8872958F9F70090B4A8 /* UIViewControllerExtensions.swift */; };
 		848BC88A2958FA1E0090B4A8 /* NumberExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848BC8892958FA1E0090B4A8 /* NumberExtensions.swift */; };
@@ -46,7 +48,9 @@
 		84459D44294A8EE900429C3D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84459D45294A8EEA00429C3D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84459D46294A8EEA00429C3D /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		84459D47294A8EEB00429C3D /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		84704DC12968AD760008BF40 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		84704DC32968AD9E0008BF40 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		84704DC52968B19F0008BF40 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		848BC8852958F5E90090B4A8 /* ColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtensions.swift; sourceTree = "<group>"; };
 		848BC8872958F9F70090B4A8 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		848BC8892958FA1E0090B4A8 /* NumberExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberExtensions.swift; sourceTree = "<group>"; };
@@ -99,6 +103,7 @@
 		84459D19294A8E0700429C3D = {
 			isa = PBXGroup;
 			children = (
+				84704DBE2968AD440008BF40 /* SignIn */,
 				3A5610E229588211005F9760 /* DummyViewController.swift */,
 				3A5610DD29587ED8005F9760 /* Models */,
 				3A5610DB29586F44005F9760 /* AuthViewController.swift */,
@@ -106,7 +111,6 @@
 				3A5610D52957A8B6005F9760 /* Managers */,
 				84E66895294B28B4002A1587 /* Supplementary */,
 				84459D50294A91DF00429C3D /* Common */,
-				84459D47294A8EEB00429C3D /* ViewController.swift */,
 				84459D23294A8E0700429C3D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -134,6 +138,15 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
+		84704DBE2968AD440008BF40 /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				84704DC12968AD760008BF40 /* SignInViewController.swift */,
+				84704DC32968AD9E0008BF40 /* SignInView.swift */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
 		848BC88D2958FAC50090B4A8 /* Popup */ = {
 			isa = PBXGroup;
 			children = (
@@ -154,6 +167,7 @@
 				848BC8872958F9F70090B4A8 /* UIViewControllerExtensions.swift */,
 				848BC8892958FA1E0090B4A8 /* NumberExtensions.swift */,
 				848BC8902958FAFA0090B4A8 /* BaseView.swift */,
+				84704DC52968B19F0008BF40 /* UIViewExtensions.swift */,
 			);
 			path = Supplementary;
 			sourceTree = "<group>";
@@ -240,6 +254,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84704DC62968B19F0008BF40 /* UIViewExtensions.swift in Sources */,
 				84459D4E294A8EEB00429C3D /* AppDelegate.swift in Sources */,
 				3A5610D72957A8C3005F9760 /* AuthManager.swift in Sources */,
 				848BC8932958FFCC0090B4A8 /* PopupViewController.swift in Sources */,
@@ -247,14 +262,15 @@
 				848BC88F2958FAD00090B4A8 /* PopupView.swift in Sources */,
 				84E66897294B28C6002A1587 /* FontExtensions.swift in Sources */,
 				848BC8882958F9F70090B4A8 /* UIViewControllerExtensions.swift in Sources */,
+				84704DC22968AD760008BF40 /* SignInViewController.swift in Sources */,
 				848BC88A2958FA1E0090B4A8 /* NumberExtensions.swift in Sources */,
 				848BC88C2958FA9D0090B4A8 /* Then.swift in Sources */,
 				3A5610DF29587EE5005F9760 /* AuthResponse.swift in Sources */,
 				3A5610E329588211005F9760 /* DummyViewController.swift in Sources */,
 				8670D27529635F7600885A39 /* RoundedButtonExtension.swift in Sources */,
 				3A5610DC29586F44005F9760 /* AuthViewController.swift in Sources */,
+				84704DC42968AD9E0008BF40 /* SignInView.swift in Sources */,
 				3A5610DA2957AE1F005F9760 /* Constants.swift in Sources */,
-				84459D4F294A8EEB00429C3D /* ViewController.swift in Sources */,
 				84459D48294A8EEB00429C3D /* SceneDelegate.swift in Sources */,
 				848BC8862958F5E90090B4A8 /* ColorExtensions.swift in Sources */,
 				848BC8912958FAFA0090B4A8 /* BaseView.swift in Sources */,
