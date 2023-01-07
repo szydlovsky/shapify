@@ -16,8 +16,8 @@ class BaseViewController: UIViewController {
         button.setBackgroundImage(UIImage(named: "customerIcon"), for: .normal)
         button.tintColor = .black
         let barButton = UIBarButtonItem(customView: button)
-        barButton.customView?.widthAnchor.constraint(equalToConstant: 44).isActive = true
-        barButton.customView?.heightAnchor.constraint(equalToConstant: 44).isActive = true
+        barButton.customView?.setHeight(44)
+        barButton.customView?.setWidth(44)
         self.navigationItem.rightBarButtonItem = barButton
     }
     
