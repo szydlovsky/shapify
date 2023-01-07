@@ -1,0 +1,22 @@
+{
+  "images" : [
+    {
+      "filename" : "iconfinder_customer_user_userphoto_account_person_1564535.svg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "iconfinder_customer_user_userphoto_account_person_1564535 1.svg",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
