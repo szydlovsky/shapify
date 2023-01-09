@@ -32,6 +32,7 @@
 		84E66894294B285F002A1587 /* Spoof-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84E66892294B285F002A1587 /* Spoof-Bold.ttf */; };
 		84E66897294B28C6002A1587 /* FontExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E66896294B28C6002A1587 /* FontExtensions.swift */; };
 		8670D27529635F7600885A39 /* RoundedButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8670D27429635F7600885A39 /* RoundedButtonExtension.swift */; };
+		8670D27829698A4100885A39 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8670D27729698A4100885A39 /* BaseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,7 @@
 		84E66892294B285F002A1587 /* Spoof-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Spoof-Bold.ttf"; sourceTree = "<group>"; };
 		84E66896294B28C6002A1587 /* FontExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontExtensions.swift; sourceTree = "<group>"; };
 		8670D27429635F7600885A39 /* RoundedButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButtonExtension.swift; sourceTree = "<group>"; };
+		8670D27729698A4100885A39 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +161,7 @@
 		84E66895294B28B4002A1587 /* Supplementary */ = {
 			isa = PBXGroup;
 			children = (
+				8670D27629698A1C00885A39 /* BaseViewController */,
 				8670D27329635EDC00885A39 /* Button */,
 				848BC88D2958FAC50090B4A8 /* Popup */,
 				848BC88B2958FA9D0090B4A8 /* Then.swift */,
@@ -178,6 +181,14 @@
 				8670D27429635F7600885A39 /* RoundedButtonExtension.swift */,
 			);
 			path = Button;
+			sourceTree = "<group>";
+		};
+		8670D27629698A1C00885A39 /* BaseViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8670D27729698A4100885A39 /* BaseViewController.swift */,
+			);
+			path = BaseViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,6 +270,7 @@
 				3A5610D72957A8C3005F9760 /* AuthManager.swift in Sources */,
 				848BC8932958FFCC0090B4A8 /* PopupViewController.swift in Sources */,
 				84459D49294A8EEB00429C3D /* Shapify.xcdatamodeld in Sources */,
+				8670D27829698A4100885A39 /* BaseViewController.swift in Sources */,
 				848BC88F2958FAD00090B4A8 /* PopupView.swift in Sources */,
 				84E66897294B28C6002A1587 /* FontExtensions.swift in Sources */,
 				848BC8882958F9F70090B4A8 /* UIViewControllerExtensions.swift in Sources */,

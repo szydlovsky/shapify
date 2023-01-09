@@ -13,6 +13,15 @@ extension UIColor {
     static let shapifySuperDarkGreen = UIColor(hexString: "1A3C40")!
     static let shapifyLightBackground = UIColor(hexString: "E4EDDB")!
     static let shapifyDarkBackground = UIColor(hexString: "CCDBC0")!
+    static let shapifyPastelPurple = UIColor(hexString: "C3AED6")!
+    static let shapifyPastelBlue = UIColor(hexString: "A6E3E9")!
+    static let shapifyMint = UIColor(hexString: "A8E6CF")!
+    static let shapifyPink = UIColor(hexString: "E6B4DC")!
+    static let shapifyYellow = UIColor(hexString: "ECD543")!
+    static let shapifyRed = UIColor(hexString: "D07474")!
+    static let shapifyPurple = UIColor(hexString: "9D9DF4")!
+    static let shapifyLightGreen = UIColor(hexString: "ADEA50")!
+    static let shapifyBlue = UIColor(hexString: "25B4F9")!
     
     // MARK: - Useful functions
     
