@@ -50,16 +50,16 @@ final class SignInView: BaseView {
         addSubviews([logoView, nameLabel, signInLabel, signInButton])
         
         NSLayoutConstraint.activate([
-            signInLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
-            signInLabel.centerYAnchor.constraint(equalTo: centerYAnchor, constant: 30),
+            logoView.centerXAnchor.constraint(equalTo: centerXAnchor),
+            logoView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: Constants.defaultMargin),
             
             nameLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
             nameLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: Constants.defaultMargin),
             nameLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -Constants.defaultMargin),
-            nameLabel.bottomAnchor.constraint(equalTo: signInLabel.topAnchor, constant: -70),
+            nameLabel.topAnchor.constraint(equalTo: logoView.bottomAnchor, constant: 10),
             
-            logoView.centerXAnchor.constraint(equalTo: centerXAnchor),
-            logoView.bottomAnchor.constraint(equalTo: nameLabel.topAnchor, constant: -10),
+            signInLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
+            signInLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 30),
             
             signInButton.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -2 * Constants.defaultMargin),
             signInButton.centerXAnchor.constraint(equalTo: centerXAnchor)

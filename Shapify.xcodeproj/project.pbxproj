@@ -12,6 +12,9 @@
 		3A5610DC29586F44005F9760 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5610DB29586F44005F9760 /* AuthViewController.swift */; };
 		3A5610DF29587EE5005F9760 /* AuthResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5610DE29587EE5005F9760 /* AuthResponse.swift */; };
 		3A5610E329588211005F9760 /* DummyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5610E229588211005F9760 /* DummyViewController.swift */; };
+		843EFC33296C647F00BBDF47 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843EFC32296C647F00BBDF47 /* SearchViewController.swift */; };
+		843EFC35296C64F900BBDF47 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843EFC34296C64F900BBDF47 /* SearchView.swift */; };
+		843EFC37296C651100BBDF47 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843EFC36296C651100BBDF47 /* SearchViewModel.swift */; };
 		84459D48294A8EEB00429C3D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84459D3C294A8EE800429C3D /* SceneDelegate.swift */; };
 		84459D49294A8EEB00429C3D /* Shapify.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 84459D3D294A8EE900429C3D /* Shapify.xcdatamodeld */; };
 		84459D4D294A8EEB00429C3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84459D45294A8EEA00429C3D /* Assets.xcassets */; };
@@ -19,6 +22,7 @@
 		84704DC22968AD760008BF40 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84704DC12968AD760008BF40 /* SignInViewController.swift */; };
 		84704DC42968AD9E0008BF40 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84704DC32968AD9E0008BF40 /* SignInView.swift */; };
 		84704DC62968B19F0008BF40 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84704DC52968B19F0008BF40 /* UIViewExtensions.swift */; };
+		847C67F9296F82A9006CD678 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847C67F8296F82A9006CD678 /* CollectionViewController.swift */; };
 		848BC8862958F5E90090B4A8 /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848BC8852958F5E90090B4A8 /* ColorExtensions.swift */; };
 		848BC8882958F9F70090B4A8 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848BC8872958F9F70090B4A8 /* UIViewControllerExtensions.swift */; };
 		848BC88A2958FA1E0090B4A8 /* NumberExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848BC8892958FA1E0090B4A8 /* NumberExtensions.swift */; };
@@ -41,6 +45,9 @@
 		3A5610DB29586F44005F9760 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		3A5610DE29587EE5005F9760 /* AuthResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResponse.swift; sourceTree = "<group>"; };
 		3A5610E229588211005F9760 /* DummyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyViewController.swift; sourceTree = "<group>"; };
+		843EFC32296C647F00BBDF47 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		843EFC34296C64F900BBDF47 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		843EFC36296C651100BBDF47 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		84459D22294A8E0700429C3D /* Shapify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shapify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84459D3C294A8EE800429C3D /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		84459D3E294A8EE900429C3D /* Shapify.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Shapify.xcdatamodel; sourceTree = "<group>"; };
@@ -52,6 +59,7 @@
 		84704DC12968AD760008BF40 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		84704DC32968AD9E0008BF40 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		84704DC52968B19F0008BF40 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
+		847C67F8296F82A9006CD678 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		848BC8852958F5E90090B4A8 /* ColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtensions.swift; sourceTree = "<group>"; };
 		848BC8872958F9F70090B4A8 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		848BC8892958FA1E0090B4A8 /* NumberExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberExtensions.swift; sourceTree = "<group>"; };
@@ -102,9 +110,21 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		843EFC31296C647300BBDF47 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				843EFC32296C647F00BBDF47 /* SearchViewController.swift */,
+				843EFC34296C64F900BBDF47 /* SearchView.swift */,
+				843EFC36296C651100BBDF47 /* SearchViewModel.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
 		84459D19294A8E0700429C3D = {
 			isa = PBXGroup;
 			children = (
+				847C67F7296F8297006CD678 /* Collection */,
+				843EFC31296C647300BBDF47 /* Search */,
 				84704DBE2968AD440008BF40 /* SignIn */,
 				3A5610E229588211005F9760 /* DummyViewController.swift */,
 				3A5610DD29587ED8005F9760 /* Models */,
@@ -147,6 +167,14 @@
 				84704DC32968AD9E0008BF40 /* SignInView.swift */,
 			);
 			path = SignIn;
+			sourceTree = "<group>";
+		};
+		847C67F7296F8297006CD678 /* Collection */ = {
+			isa = PBXGroup;
+			children = (
+				847C67F8296F82A9006CD678 /* CollectionViewController.swift */,
+			);
+			path = Collection;
 			sourceTree = "<group>";
 		};
 		848BC88D2958FAC50090B4A8 /* Popup */ = {
@@ -277,10 +305,14 @@
 				84704DC22968AD760008BF40 /* SignInViewController.swift in Sources */,
 				848BC88A2958FA1E0090B4A8 /* NumberExtensions.swift in Sources */,
 				848BC88C2958FA9D0090B4A8 /* Then.swift in Sources */,
+				843EFC33296C647F00BBDF47 /* SearchViewController.swift in Sources */,
+				843EFC35296C64F900BBDF47 /* SearchView.swift in Sources */,
 				3A5610DF29587EE5005F9760 /* AuthResponse.swift in Sources */,
 				3A5610E329588211005F9760 /* DummyViewController.swift in Sources */,
 				8670D27529635F7600885A39 /* RoundedButtonExtension.swift in Sources */,
 				3A5610DC29586F44005F9760 /* AuthViewController.swift in Sources */,
+				843EFC37296C651100BBDF47 /* SearchViewModel.swift in Sources */,
+				847C67F9296F82A9006CD678 /* CollectionViewController.swift in Sources */,
 				84704DC42968AD9E0008BF40 /* SignInView.swift in Sources */,
 				3A5610DA2957AE1F005F9760 /* Constants.swift in Sources */,
 				84459D48294A8EEB00429C3D /* SceneDelegate.swift in Sources */,
@@ -422,12 +454,13 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.pios.Shapify;
+				PRODUCT_BUNDLE_IDENTIFIER = com.p.Shapify;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -452,12 +485,13 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.pios.Shapify;
+				PRODUCT_BUNDLE_IDENTIFIER = com.p.Shapify;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
