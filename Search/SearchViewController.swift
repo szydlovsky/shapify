@@ -32,6 +32,9 @@ final class SearchViewController: BaseViewController {
             if ongoing {
                 self?.viewModel.beginRecording()
                 self?.navigationController?.navigationBar.isUserInteractionEnabled = false
+                if let tabBar = self?.tabBarController as? AppTabBarController {
+                    tabBar.tabBar.isUserInteractionEnabled = false
+                }
             } else {
                 self?.viewModel.stopRecording()
             }
@@ -45,6 +48,9 @@ final class SearchViewController: BaseViewController {
             }
             self?.viewModel.handleResults()
             self?.navigationController?.navigationBar.isUserInteractionEnabled = true
+            if let tabBar = self?.tabBarController as? AppTabBarController {
+                tabBar.tabBar.isUserInteractionEnabled = true
+            }
         }.store(in: &subs)
         
         viewModel.$resultsReady.sink { [weak self] ready in

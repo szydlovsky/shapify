@@ -17,45 +17,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             window.overrideUserInterfaceStyle = .light
             
             if AuthManager.shared.isLoggedIn {
-                //Search
-                let searchNav = UINavigationController(
-                    rootViewController: SearchViewController(
-                        viewModel: SearchViewModel()
-                    )
-                )
-                let searchImg = UIImage(named: "search")?.withRenderingMode(.alwaysOriginal)
-                let searchSelectedImg = UIImage(named: "searchSelected")?.withRenderingMode(.alwaysOriginal)
-                let searchTabBarItem = UITabBarItem(
-                    title: "Search",
-                    image: searchImg,
-                    selectedImage: searchSelectedImg
-                ).then {
-                    $0.setTabBarItemAppearance()
-                }
-                searchNav.tabBarItem = searchTabBarItem
-                
-                //Collection
-                let collectionNav = UINavigationController(
-                    rootViewController: CollectionViewController()
-                )
-                let collectionImg = UIImage(named: "collection")?.withRenderingMode(.alwaysOriginal)
-                let collectionSelectedImg = UIImage(named: "collectionSelected")?.withRenderingMode(.alwaysOriginal)
-                let collectionTabBarItem = UITabBarItem(
-                    title: "Collection",
-                    image: collectionImg,
-                    selectedImage: collectionSelectedImg
-                ).then {
-                    $0.setTabBarItemAppearance()
-                }
-                collectionNav.tabBarItem = collectionTabBarItem
-                
-                //Tab bar
-                let tabBar = UITabBarController().then {
-                    $0.tabBar.backgroundColor = .shapifyGreen
-                    $0.tabBar.clipsToBounds = true
-                    $0.viewControllers = [searchNav, collectionNav]
-                }
-                
+                let tabBar = AppTabBarController()
                 window.rootViewController = tabBar
             } else  {
                 let signInNavVc = UINavigationController(
@@ -98,40 +60,5 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         // Save changes in the application's managed object context when the application transitions to the background.
         (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
-    }
-
-
-}
-
-extension UITabBarItem {
-    func setTabBarItemAppearance() {
-        let inset = .screenHeight * 0.002
-        imageInsets = UIEdgeInsets(top: inset, left: 0, bottom: -inset, right: 0)
-        setTitleTextAttributes(
-            [
-                NSAttributedString.Key.font: UIFont.appFont(ofSize: 12),
-                NSAttributedString.Key.foregroundColor: UIColor.shapifyBlack
-            ],
-            for: .normal
-        )
-        setTitleTextAttributes(
-            [
-                NSAttributedString.Key.font: UIFont.appFont(ofSize: 12),
-                NSAttributedString.Key.foregroundColor: UIColor.shapifyLightBackground
-            ],
-            for: .selected
-        )
-    }
-}
-
-extension UITabBarController {
-    override open func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-
-        let height = .screenHeight * 0.1
-        tabBar.frame.size.height = height
-        tabBar.frame.origin.y = view.frame.height - height
-        
-        tabBar.unselectedItemTintColor = .shapifyBlack
     }
 }

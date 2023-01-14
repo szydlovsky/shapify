@@ -12,6 +12,7 @@
 		3A5610DC29586F44005F9760 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5610DB29586F44005F9760 /* AuthViewController.swift */; };
 		3A5610DF29587EE5005F9760 /* AuthResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5610DE29587EE5005F9760 /* AuthResponse.swift */; };
 		3A5610E329588211005F9760 /* DummyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5610E229588211005F9760 /* DummyViewController.swift */; };
+		842E4CC1297304A900F4E230 /* AppTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842E4CC0297304A900F4E230 /* AppTabBarController.swift */; };
 		843EFC33296C647F00BBDF47 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843EFC32296C647F00BBDF47 /* SearchViewController.swift */; };
 		843EFC35296C64F900BBDF47 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843EFC34296C64F900BBDF47 /* SearchView.swift */; };
 		843EFC37296C651100BBDF47 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843EFC36296C651100BBDF47 /* SearchViewModel.swift */; };
@@ -45,6 +46,7 @@
 		3A5610DB29586F44005F9760 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		3A5610DE29587EE5005F9760 /* AuthResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResponse.swift; sourceTree = "<group>"; };
 		3A5610E229588211005F9760 /* DummyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyViewController.swift; sourceTree = "<group>"; };
+		842E4CC0297304A900F4E230 /* AppTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabBarController.swift; sourceTree = "<group>"; };
 		843EFC32296C647F00BBDF47 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		843EFC34296C64F900BBDF47 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		843EFC36296C651100BBDF47 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
@@ -199,6 +201,7 @@
 				848BC8892958FA1E0090B4A8 /* NumberExtensions.swift */,
 				848BC8902958FAFA0090B4A8 /* BaseView.swift */,
 				84704DC52968B19F0008BF40 /* UIViewExtensions.swift */,
+				842E4CC0297304A900F4E230 /* AppTabBarController.swift */,
 			);
 			path = Supplementary;
 			sourceTree = "<group>";
@@ -298,6 +301,7 @@
 				3A5610D72957A8C3005F9760 /* AuthManager.swift in Sources */,
 				848BC8932958FFCC0090B4A8 /* PopupViewController.swift in Sources */,
 				84459D49294A8EEB00429C3D /* Shapify.xcdatamodeld in Sources */,
+				842E4CC1297304A900F4E230 /* AppTabBarController.swift in Sources */,
 				8670D27829698A4100885A39 /* BaseViewController.swift in Sources */,
 				848BC88F2958FAD00090B4A8 /* PopupView.swift in Sources */,
 				84E66897294B28C6002A1587 /* FontExtensions.swift in Sources */,
