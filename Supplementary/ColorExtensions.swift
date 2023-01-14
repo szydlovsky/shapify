@@ -22,6 +22,7 @@ extension UIColor {
     static let shapifyPurple = UIColor(hexString: "9D9DF4")!
     static let shapifyLightGreen = UIColor(hexString: "ADEA50")!
     static let shapifyBlue = UIColor(hexString: "25B4F9")!
+    static let shapifyBlack = UIColor(hexString: "1A1A1A")!
     
     // MARK: - Useful functions
     

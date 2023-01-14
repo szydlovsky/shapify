@@ -17,11 +17,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             window.overrideUserInterfaceStyle = .light
             
             if AuthManager.shared.isLoggedIn {
-                //TODO: - Replace DummyViewController with actual TabBarController
-                let dummyNavVc = UINavigationController(
-                    rootViewController: DummyViewController()
-                )
-                window.rootViewController = dummyNavVc
+                let tabBar = AppTabBarController()
+                window.rootViewController = tabBar
             } else  {
                 let signInNavVc = UINavigationController(
                     rootViewController: SignInViewController()
@@ -64,7 +61,4 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Save changes in the application's managed object context when the application transitions to the background.
         (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
     }
-
-
 }
-
