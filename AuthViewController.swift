@@ -16,8 +16,6 @@ final class AuthViewController: UIViewController {
         return wv
     }()
     
-    var completionHandler: (() -> ())?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground

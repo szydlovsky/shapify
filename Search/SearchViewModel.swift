@@ -99,7 +99,6 @@ final class SearchViewModel {
                 return
             }
             do {
-                let json = try JSONSerialization.jsonObject(with: data, options: .fragmentsAllowed)
                 let result = try JSONDecoder().decode(TrackResponse.self, from: data)
                 self?.currentTrack = result.track
                 completion(nil)
