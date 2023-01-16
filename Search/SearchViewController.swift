@@ -4,6 +4,7 @@
 
 import UIKit
 import Combine
+import AVFoundation
 
 final class SearchViewController: BaseViewController {
     
@@ -24,6 +25,23 @@ final class SearchViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let recordingSession = AVAudioSession.sharedInstance()
+        do {
+            try recordingSession.setCategory(.multiRoute, mode: .default, options: .mixWithOthers)
+            try recordingSession.setActive(true, options: .notifyOthersOnDeactivation)
+            recordingSession.requestRecordPermission() { [weak self] allowed in
+                DispatchQueue.main.async {
+                    if !allowed {
+                        // pop up with error
+                        self?.showPopup(message: "You did not allow to use your microfone. Make it in Settings to use the app.", buttonTitle: "OK")
+                    }
+                }
+            }
+        } catch {
+            // popup with error
+            showPopup(message: "Error occured when requesting using of microphone. Give an access in Settings to use the app.", buttonTitle: "OK")
+        }
         
         mainView.setRecordingRepetitions(to: viewModel.bubbleAnimationRepetitions)
         
@@ -53,6 +71,7 @@ final class SearchViewController: BaseViewController {
             }
         }.store(in: &subs)
         
+        viewModel.delegate = self
         viewModel.$resultsReady.sink { [weak self] ready in
             guard let ready = ready,
                   ready
@@ -61,5 +80,13 @@ final class SearchViewController: BaseViewController {
             }
             self?.mainView.stopLoading()
         }.store(in: &subs)
+    }
+}
+
+extension SearchViewController: SearchViewModelDelegate {
+    func showError(_ message: String) {
+        DispatchQueue.main.async { [weak self] in
+            self?.showPopup(message: message, buttonTitle: "OK")
+        }
     }
 }
