@@ -29,7 +29,8 @@ final class AuthViewController: UIViewController {
         guard let url = URL(string: AuthManager.shared.signInURL) else {
             return
         }
-        webView.load(URLRequest(url: url))
+        self.webView.load(URLRequest(url: url))
+        
     }
     
     override func viewDidLayoutSubviews() {
@@ -55,6 +56,9 @@ extension AuthViewController: WKNavigationDelegate {
         AuthManager.shared.exchangeCodeForToken(code: code) { [weak self] result in
             DispatchQueue.main.async {
                 self?.navigationController?.popViewController(animated: true)
+                let tabBar = AppTabBarController()
+                tabBar.modalPresentationStyle = .fullScreen
+                self?.present(tabBar, animated: false)
             }
         }
     }
