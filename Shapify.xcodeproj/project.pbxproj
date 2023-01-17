@@ -16,6 +16,7 @@
 		843EFC33296C647F00BBDF47 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843EFC32296C647F00BBDF47 /* SearchViewController.swift */; };
 		843EFC35296C64F900BBDF47 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843EFC34296C64F900BBDF47 /* SearchView.swift */; };
 		843EFC37296C651100BBDF47 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843EFC36296C651100BBDF47 /* SearchViewModel.swift */; };
+		844469E42975FE3C008B45B3 /* DateFormatterExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844469E32975FE3C008B45B3 /* DateFormatterExtensions.swift */; };
 		84459D48294A8EEB00429C3D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84459D3C294A8EE800429C3D /* SceneDelegate.swift */; };
 		84459D49294A8EEB00429C3D /* Shapify.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 84459D3D294A8EE900429C3D /* Shapify.xcdatamodeld */; };
 		84459D4D294A8EEB00429C3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84459D45294A8EEA00429C3D /* Assets.xcassets */; };
@@ -50,6 +51,7 @@
 		843EFC32296C647F00BBDF47 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		843EFC34296C64F900BBDF47 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		843EFC36296C651100BBDF47 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		844469E32975FE3C008B45B3 /* DateFormatterExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatterExtensions.swift; sourceTree = "<group>"; };
 		84459D22294A8E0700429C3D /* Shapify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shapify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84459D3C294A8EE800429C3D /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		84459D3E294A8EE900429C3D /* Shapify.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Shapify.xcdatamodel; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 				848BC8902958FAFA0090B4A8 /* BaseView.swift */,
 				84704DC52968B19F0008BF40 /* UIViewExtensions.swift */,
 				842E4CC0297304A900F4E230 /* AppTabBarController.swift */,
+				844469E32975FE3C008B45B3 /* DateFormatterExtensions.swift */,
 			);
 			path = Supplementary;
 			sourceTree = "<group>";
@@ -299,6 +302,7 @@
 				84704DC62968B19F0008BF40 /* UIViewExtensions.swift in Sources */,
 				84459D4E294A8EEB00429C3D /* AppDelegate.swift in Sources */,
 				3A5610D72957A8C3005F9760 /* AuthManager.swift in Sources */,
+				844469E42975FE3C008B45B3 /* DateFormatterExtensions.swift in Sources */,
 				848BC8932958FFCC0090B4A8 /* PopupViewController.swift in Sources */,
 				84459D49294A8EEB00429C3D /* Shapify.xcdatamodeld in Sources */,
 				842E4CC1297304A900F4E230 /* AppTabBarController.swift in Sources */,

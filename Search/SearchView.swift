@@ -84,7 +84,16 @@ final class SearchView: BaseView {
             logoView.centerYAnchor.constraint(equalTo: outerCircle.centerYAnchor)
         ])
         
-        logoView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(buttonPressed)))
+        let tap = UITapGestureRecognizer(target: self, action: #selector(buttonPressed)).then {
+            $0.delegate = self
+        }
+        logoView.addGestureRecognizer(tap)
+        
+        let longPress = UILongPressGestureRecognizer(target: self, action: #selector(buttonLongPressed(sender:))).then {
+            $0.minimumPressDuration = 0.2
+            $0.delegate = self
+        }
+        logoView.addGestureRecognizer(longPress)
         
         $recordingOngoing.sink { [weak self] ongoing in
             guard let ongoing = ongoing else { return }
@@ -98,7 +107,32 @@ final class SearchView: BaseView {
     }
     
     @objc private func buttonPressed() {
-        beginAnimation()
+        beginRecordAnimation()
+    }
+    
+    @objc private func buttonLongPressed(sender: UILongPressGestureRecognizer) {
+        if sender.state == .began {
+            beginLongPressAnimation()
+        } else if sender.state == .cancelled ||
+                  sender.state == .ended ||
+                  sender.state == .failed
+        {
+            endLongPressAnimation()
+        }
+    }
+    
+    //MARK: - Longpress animaations
+    
+    private func beginLongPressAnimation() {
+        UIView.animate(withDuration: 0.3) { [weak self] in
+            self?.logoView.transform = CGAffineTransform(scaleX: 0.83, y: 0.83)
+        }
+    }
+    
+    private func endLongPressAnimation() {
+        UIView.animate(withDuration: 0.3) { [weak self] in
+            self?.logoView.transform = .identity
+        }
     }
     
     //MARK: - Recording animations
@@ -110,7 +144,7 @@ final class SearchView: BaseView {
         recordingRepetitions = amount
     }
     
-    private func beginAnimation() {
+    private func beginRecordAnimation() {
         recordingOngoing = true
         UIView.animate(withDuration: 0.5, animations: { [weak self] in
             let scale = 0.6 / 0.54
@@ -183,5 +217,11 @@ final class SearchView: BaseView {
                 }
             }
         }
+    }
+}
+
+extension SearchView: UIGestureRecognizerDelegate {
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        true
     }
 }
