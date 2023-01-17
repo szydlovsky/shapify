@@ -15,7 +15,7 @@ final class AuthManager {
     
     struct K {
         static let clientID = "6c0741586b8d40b7a2d56c4c7216c5dc"
-        static let clientSecret = ""
+        static let clientSecret = Constants.clientSecret
         static let redirectURI = "http://lvh.me"
         static let tokenBaseURL = "https://accounts.spotify.com/api/token"
         static let signInBaseURL = "https://accounts.spotify.com/authorize"

@@ -46,10 +46,14 @@ extension AuthViewController: WKNavigationDelegate {
         }
         
         let components = URLComponents(string: url.absoluteString)
-        
         guard let code = components?.queryItems?.filter({ item in
             item.name == "code"
         }).first?.value else {
+            if let hasNoError = components?.queryItems?.filter({ item in
+                item.name == "error"
+            }).isEmpty, !hasNoError {
+                navigationController?.popViewController(animated: true)
+            }
             return
         }
         webView.isHidden = true
