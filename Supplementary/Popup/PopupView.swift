@@ -15,8 +15,8 @@ final class PopupView: BaseView {
         $0.layer.cornerRadius = 20
         $0.layer.borderWidth = 3
         $0.layer.borderColor = UIColor.shapifySuperDarkGreen.cgColor
-        $0.widthAnchor.constraint(equalToConstant: .screenWidth * 0.6).isActive = true
-        $0.heightAnchor.constraint(equalToConstant: .screenWidth * 0.3).isActive = true
+        $0.widthAnchor.constraint(equalToConstant: .screenWidth * 0.85).isActive = true
+        $0.heightAnchor.constraint(equalToConstant: .screenWidth * 0.45).isActive = true
     }
     
     private let messageLabel = UILabel().then {
@@ -36,8 +36,8 @@ final class PopupView: BaseView {
         $0.backgroundColor = .shapifyDarkGreen
         $0.titleLabel?.font = .appFont(ofSize: 14, isBold: true)
         $0.setTitleColor(.shapifyLightBackground, for: .normal)
-        $0.widthAnchor.constraint(equalToConstant: .screenWidth * 0.23).isActive = true
-        $0.heightAnchor.constraint(equalToConstant: .screenWidth * 0.07).isActive = true
+        $0.widthAnchor.constraint(equalToConstant: .screenWidth * 0.4).isActive = true
+        $0.heightAnchor.constraint(equalToConstant: .screenWidth * 0.1).isActive = true
         $0.layer.cornerRadius = 5
     }
     
