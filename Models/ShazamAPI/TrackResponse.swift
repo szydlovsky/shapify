@@ -15,9 +15,10 @@ struct Images: Codable {
 struct Track: Codable {
     let title: String
     let subtitle: String
+    let externalURL: String?
     let images: Images?
 }
 
 struct TrackResponse: Codable {
-    let track: Track
+    let track: Track?
 }

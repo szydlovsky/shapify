@@ -90,7 +90,7 @@ final class SearchView: BaseView {
         logoView.addGestureRecognizer(tap)
         
         let longPress = UILongPressGestureRecognizer(target: self, action: #selector(buttonLongPressed(sender:))).then {
-            $0.minimumPressDuration = 0.2
+            $0.minimumPressDuration = 0.01
             $0.delegate = self
         }
         logoView.addGestureRecognizer(longPress)
