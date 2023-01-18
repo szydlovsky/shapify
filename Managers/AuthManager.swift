@@ -15,7 +15,7 @@ final class AuthManager {
     
     struct K {
         static let clientID = "6c0741586b8d40b7a2d56c4c7216c5dc"
-        static let clientSecret = ""
+        static let clientSecret = Constants.clientSecret
         static let redirectURI = "http://lvh.me"
         static let tokenBaseURL = "https://accounts.spotify.com/api/token"
         static let signInBaseURL = "https://accounts.spotify.com/authorize"
@@ -58,7 +58,7 @@ final class AuthManager {
         return Date().addingTimeInterval(fiveMinutes) >= expirationDate
     }
     
-    private var refreshingToken = true
+    private var refreshingToken = false
     
     /// Exchanges code received from Spotify for access token
     public func exchangeCodeForToken(code: String, completion: @escaping (Result<Bool, AuthManagerError>) -> ()) {
@@ -163,7 +163,6 @@ final class AuthManager {
         request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
         let authField = Data("\(K.clientID):\(K.clientSecret)".utf8).base64EncodedString()
         request.setValue("Basic \(authField)", forHTTPHeaderField: "Authorization")
-        
         URLSession.shared.dataTask(with: request) { [weak self] data, _, error in
             self?.refreshingToken = false
             guard let data = data, error == nil else {
@@ -171,20 +170,21 @@ final class AuthManager {
                 print(error?.localizedDescription ?? "")
                 return
             }
-            
             do {
                 let result = try JSONDecoder().decode(AuthResponse.self, from: data)
                 self?.saveTokens(response: result)
+                
                 self?.onRefreshBlocks.forEach { completion in
                     completion(result.access_token)
                 }
                 self?.onRefreshBlocks.removeAll()
+                
                 completion(true)
             } catch {
                 print(error.localizedDescription)
                 completion(false)
             }
-        }
+        }.resume()
     }
     
     /// Caching tokens and expiration date

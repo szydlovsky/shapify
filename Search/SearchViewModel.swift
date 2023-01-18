@@ -16,7 +16,7 @@ final class SearchViewModel {
     
     private var recorder: AVAudioRecorder!
     
-    private var currentTrack: Track?
+    private var currentTracks = [Track]()
     
     weak var delegate: SearchViewModelDelegate?
     
@@ -45,71 +45,62 @@ final class SearchViewModel {
     func stopRecording() {
         recorder.stop()
         recorder = nil
+        currentTracks = []
         if #available(iOS 16, *) {
             let fileName = getDocumentsDirectory().appending(component: "file.m4a")
             if let data = try? Data(contentsOf: fileName) {
-                request(input: data) { [weak self] message in
-                    self?.resultsReady = true
-                    if let error = message {
-                        self?.delegate?.showError(error)
-                    }
-                }
+                getTracks(data)
             }
         } else {
             let fileName = getDocumentsDirectory().appendingPathComponent("file.m4a")
             if let data = try? Data(contentsOf: fileName) {
-                request(input: data) { [weak self] message in
-                    self?.resultsReady = true
-                    if let error = message {
-                        self?.delegate?.showError(error)
-                    }
-                }
+                getTracks(data)
             }
         }
     }
     
     func handleResults() {
         //TODO: - Implement showing results
-        print(currentTrack)
-    }
-    
-    private func request(input: Data, completion: @escaping (String?) -> ()) {
-        currentTrack = nil
-        let headers = [
-            "content-type": "text/plain",
-            "X-RapidAPI-Key": Constants.rapidAPIKey,
-            "X-RapidAPI-Host": "shazam.p.rapidapi.com"
-        ]
-        
-        guard let url = URL(string: "https://shazam.p.rapidapi.com/songs/v2/detect?timezone=America%2FChicago&locale=en-US") else {
-            completion("Error occured while creating url.")
-            return
-        }
-        
-        var request = URLRequest(url: url,
-                                 cachePolicy: .useProtocolCachePolicy,
-                                 timeoutInterval: 10.0)
-        request.httpMethod = "POST"
-        request.allHTTPHeaderFields = headers
-        request.httpBody = input.base64EncodedString().data(using: .utf8)
-        
-        URLSession.shared.dataTask(with: request as URLRequest, completionHandler: { [weak self] data, response, error in
-            guard let data = data, error == nil else {
-                completion(error?.localizedDescription)
-                return
-            }
-            do {
-                let result = try JSONDecoder().decode(TrackResponse.self, from: data)
-                self?.currentTrack = result.track
-                completion(nil)
-            } catch {
-                completion(error.localizedDescription)
-            }
-        }).resume()
+        print(currentTracks)
     }
     
     private func getDocumentsDirectory() -> URL {
         let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         return paths[0]
+    }
+    
+    private func getTracks(_ data: Data) {
+        APICaller.shared.recognizeTrack(using: data) { [weak self] res in
+            switch res {
+            case .failure(let error):
+                self?.delegate?.showError(error.localizedDescription)
+                self?.resultsReady = true
+            case .success(let track):
+                APICaller.shared.searchForTrack(with: track.subtitle, and: track.title) { res in
+                    switch res {
+                    case .failure(let error):
+                        self?.delegate?.showError(error.localizedDescription)
+                    case .success(let tracks):
+                        self?.currentTracks = []
+                        if tracks.isEmpty {
+                            self?.delegate?.showError(APICaller.NetworkingError.trackNotFound.localizedDescription)
+                        }
+                        tracks.forEach { spotifyTrack in
+                            let albumImage = spotifyTrack.album.images.first?.url ?? (track.images?.background ?? "")
+                            let trackImage = spotifyTrack.album.images.first?.url ?? (track.images?.coverart ?? "")
+                            self?.currentTracks.append(
+                                Track(
+                                    title: spotifyTrack.name,
+                                    subtitle: spotifyTrack.artists.first?.name ?? "No Artist",
+                                    externalURL: spotifyTrack.external_urls.spotify,
+                                    images: Images(background: albumImage, coverart: trackImage)
+                                )
+                            )
+                        }
+                    }
+                    self?.resultsReady = true
+                }
+            }
+        }
     }
 }
