@@ -19,4 +19,28 @@ extension UIView {
             addSubview($0)
         })
     }
+    
+    func roundCorners(corners: UIRectCorner, radius: CGFloat) {
+        let path = UIBezierPath(roundedRect: bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
+        let mask = CAShapeLayer()
+        mask.path = path.cgPath
+        layer.mask = mask
+    }
+}
+
+extension UICollectionViewLayout {
+    
+    static func defaultFlowLayout (
+        scrollDirection: UICollectionView.ScrollDirection = .vertical,
+        minimumSpacing: CGFloat,
+        cellSize: CGSize,
+        headerSize: CGSize
+    ) -> UICollectionViewFlowLayout {
+        return UICollectionViewFlowLayout().then {
+            $0.scrollDirection = scrollDirection
+            $0.minimumLineSpacing = minimumSpacing
+            $0.itemSize = cellSize
+            $0.headerReferenceSize = headerSize
+        }
+    }
 }

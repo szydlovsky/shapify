@@ -7,6 +7,10 @@
 		<string>Spoof-Bold.ttf</string>
 		<string>Spoof-Regular.ttf</string>
 	</array>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>spotify</string>
+	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

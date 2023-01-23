@@ -24,6 +24,31 @@ extension UIColor {
     static let shapifyBlue = UIColor(hexString: "25B4F9")!
     static let shapifyBlack = UIColor(hexString: "1A1A1A")!
     
+    static func CollectionColor(at idx: Int) -> UIColor {
+        switch idx % 9 {
+        case 0:
+            return .shapifyPastelPurple
+        case 1:
+            return .shapifyPastelBlue
+        case 2:
+            return .shapifyMint
+        case 3:
+            return .shapifyPink
+        case 4:
+            return .shapifyYellow
+        case 5:
+            return .shapifyRed
+        case 6:
+            return .shapifyPurple
+        case 7:
+            return .shapifyLightGreen
+        case 8:
+            return .shapifyBlue
+        default:
+            return .shapifyPastelPurple
+        }
+    }
+    
     // MARK: - Useful functions
     
     convenience init?(hexString: String) {
