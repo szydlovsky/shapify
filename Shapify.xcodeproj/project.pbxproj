@@ -10,6 +10,8 @@
 		3A2462852974862E0019B18E /* TrackResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2462842974862E0019B18E /* TrackResponse.swift */; };
 		3A246287297832F30019B18E /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A246286297832F30019B18E /* APICaller.swift */; };
 		3A24628B297847E60019B18E /* FoundTracksResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A24628A297847E60019B18E /* FoundTracksResponse.swift */; };
+		3A4A00D6298068B9001E70EF /* ProfileResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4A00D5298068B9001E70EF /* ProfileResponse.swift */; };
+		3A4A00D829806A2F001E70EF /* ProfileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4A00D729806A2F001E70EF /* ProfileManager.swift */; };
 		3A5610D72957A8C3005F9760 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5610D62957A8C3005F9760 /* AuthManager.swift */; };
 		3A5610DA2957AE1F005F9760 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5610D92957AE1E005F9760 /* Constants.swift */; };
 		3A5610DC29586F44005F9760 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5610DB29586F44005F9760 /* AuthViewController.swift */; };
@@ -47,6 +49,8 @@
 		3A2462842974862E0019B18E /* TrackResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackResponse.swift; sourceTree = "<group>"; };
 		3A246286297832F30019B18E /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
 		3A24628A297847E60019B18E /* FoundTracksResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoundTracksResponse.swift; sourceTree = "<group>"; };
+		3A4A00D5298068B9001E70EF /* ProfileResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileResponse.swift; sourceTree = "<group>"; };
+		3A4A00D729806A2F001E70EF /* ProfileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileManager.swift; sourceTree = "<group>"; };
 		3A5610D62957A8C3005F9760 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		3A5610D92957AE1E005F9760 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3A5610DB29586F44005F9760 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
@@ -106,6 +110,7 @@
 			children = (
 				3A5610DE29587EE5005F9760 /* AuthResponse.swift */,
 				3A24628A297847E60019B18E /* FoundTracksResponse.swift */,
+				3A4A00D5298068B9001E70EF /* ProfileResponse.swift */,
 			);
 			path = SpotifyAPI;
 			sourceTree = "<group>";
@@ -115,6 +120,7 @@
 			children = (
 				3A5610D62957A8C3005F9760 /* AuthManager.swift */,
 				3A246286297832F30019B18E /* APICaller.swift */,
+				3A4A00D729806A2F001E70EF /* ProfileManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -322,6 +328,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84704DC62968B19F0008BF40 /* UIViewExtensions.swift in Sources */,
+				3A4A00D829806A2F001E70EF /* ProfileManager.swift in Sources */,
 				84459D4E294A8EEB00429C3D /* AppDelegate.swift in Sources */,
 				3A5610D72957A8C3005F9760 /* AuthManager.swift in Sources */,
 				3A24628B297847E60019B18E /* FoundTracksResponse.swift in Sources */,
@@ -329,6 +336,7 @@
 				844469E42975FE3C008B45B3 /* DateFormatterExtensions.swift in Sources */,
 				848BC8932958FFCC0090B4A8 /* PopupViewController.swift in Sources */,
 				84459D49294A8EEB00429C3D /* Shapify.xcdatamodeld in Sources */,
+				3A4A00D6298068B9001E70EF /* ProfileResponse.swift in Sources */,
 				842E4CC1297304A900F4E230 /* AppTabBarController.swift in Sources */,
 				8670D27829698A4100885A39 /* BaseViewController.swift in Sources */,
 				848BC88F2958FAD00090B4A8 /* PopupView.swift in Sources */,
