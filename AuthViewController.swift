@@ -58,11 +58,17 @@ extension AuthViewController: WKNavigationDelegate {
         }
         webView.isHidden = true
         AuthManager.shared.exchangeCodeForToken(code: code) { [weak self] result in
-            DispatchQueue.main.async {
-                self?.navigationController?.popViewController(animated: true)
-                let tabBar = AppTabBarController()
-                tabBar.modalPresentationStyle = .fullScreen
-                self?.present(tabBar, animated: false)
+            switch result {
+            case .success(_):
+                DispatchQueue.main.async {
+                    self?.navigationController?.popViewController(animated: true)
+                    let tabBar = AppTabBarController()
+                    tabBar.modalPresentationStyle = .fullScreen
+                    self?.present(tabBar, animated: false)
+                }
+            case .failure(let error):
+                print(error.localizedDescription)
+                break
             }
         }
     }

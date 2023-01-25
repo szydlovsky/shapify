@@ -39,7 +39,6 @@ final class APICaller {
     }
     
     public func recognizeTrack(using input: Data, completion: @escaping (Result<Track, NetworkingError>) -> ()) {
-        
         let headers = [
             "content-type": "text/plain",
             "X-RapidAPI-Key": Constants.rapidAPIKey,
@@ -95,6 +94,29 @@ final class APICaller {
                 do {
                     let result = try JSONDecoder().decode(FoundTracksResponse.self, from: data)
                     completion(.success(result.tracks.items))
+                } catch {
+                    completion(.failure(.decoding))
+                }
+            }.resume()
+        }
+    }
+    
+    public func getProfile(completion: @escaping (Result<Bool, NetworkingError>) -> () = {_ in }) {
+        let urlString = K.baseURL + "me"
+        createRequest(with: urlString) { request in
+            guard let request = request else {
+                completion(.failure(.requestInit))
+                return
+            }
+            URLSession.shared.dataTask(with: request) { data, _, error in
+                guard let data = data, error == nil else {
+                    completion(.failure(.gettingData))
+                    return
+                }
+                do {
+                    let result = try JSONDecoder().decode(ProfileResponse.self, from: data)
+                    ProfileManager.shared.profile = ProfileManager.Profile(imageURL: result.images.first?.url, username: result.display_name, email: result.email)
+                    completion(.success(true))
                 } catch {
                     completion(.failure(.decoding))
                 }
