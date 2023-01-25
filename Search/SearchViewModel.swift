@@ -8,6 +8,7 @@ import AVFoundation
 
 protocol SearchViewModelDelegate: AnyObject {
     func showError(_ message: String)
+    func showResults(_ viewModel: ResultsViewModel)
 }
 
 final class SearchViewModel {
@@ -60,8 +61,13 @@ final class SearchViewModel {
     }
     
     func handleResults() {
-        //TODO: - Implement showing results
-        print(currentTracks)
+        guard !currentTracks.isEmpty else { return }
+        let vm = ResultsViewModel(
+            tracks: currentTracks,
+            isPostSearch: true,
+            searchDate: Date()
+        )
+        delegate?.showResults(vm)
     }
     
     private func getDocumentsDirectory() -> URL {
