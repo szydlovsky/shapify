@@ -64,11 +64,11 @@ final class SearchViewController: BaseViewController {
             else {
                 return
             }
-            self?.viewModel.handleResults()
             self?.navigationController?.navigationBar.isUserInteractionEnabled = true
             if let tabBar = self?.tabBarController as? AppTabBarController {
                 tabBar.tabBar.isUserInteractionEnabled = true
             }
+            self?.viewModel.handleResults()
         }.store(in: &subs)
         
         viewModel.delegate = self
@@ -84,9 +84,16 @@ final class SearchViewController: BaseViewController {
 }
 
 extension SearchViewController: SearchViewModelDelegate {
+    
     func showError(_ message: String) {
         DispatchQueue.main.async { [weak self] in
             self?.showPopup(message: message, buttonTitle: "OK")
         }
+    }
+    
+    func showResults(_ viewModel: ResultsViewModel) {
+        let vc = ResultsViewController(viewModel: viewModel)
+        vc.modalPresentationStyle = .pageSheet
+        present(vc, animated: true)
     }
 }

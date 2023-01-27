@@ -19,10 +19,15 @@
 		3A5610DF29587EE5005F9760 /* AuthResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5610DE29587EE5005F9760 /* AuthResponse.swift */; };
 		3A5A779229807C17006B8214 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3A5A779129807C17006B8214 /* GoogleService-Info.plist */; };
 		3A5A779429807D0A006B8214 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5A779329807D0A006B8214 /* DatabaseManager.swift */; };
+		8403EC26297814740017AD29 /* ResultsCollectionViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8403EC25297814740017AD29 /* ResultsCollectionViewHeader.swift */; };
 		842E4CC1297304A900F4E230 /* AppTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842E4CC0297304A900F4E230 /* AppTabBarController.swift */; };
 		843EFC33296C647F00BBDF47 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843EFC32296C647F00BBDF47 /* SearchViewController.swift */; };
 		843EFC35296C64F900BBDF47 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843EFC34296C64F900BBDF47 /* SearchView.swift */; };
 		843EFC37296C651100BBDF47 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843EFC36296C651100BBDF47 /* SearchViewModel.swift */; };
+		844142C82976BCC9002D3EED /* ResultsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844142C72976BCC9002D3EED /* ResultsViewModel.swift */; };
+		844142CA2976BCE5002D3EED /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844142C92976BCE5002D3EED /* ResultsViewController.swift */; };
+		844142CC2976BCFC002D3EED /* ResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844142CB2976BCFC002D3EED /* ResultsView.swift */; };
+		844142CE2976E70B002D3EED /* ResultsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844142CD2976E70B002D3EED /* ResultsCollectionViewCell.swift */; };
 		844469E42975FE3C008B45B3 /* DateFormatterExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844469E32975FE3C008B45B3 /* DateFormatterExtensions.swift */; };
 		84459D48294A8EEB00429C3D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84459D3C294A8EE800429C3D /* SceneDelegate.swift */; };
 		84459D49294A8EEB00429C3D /* Shapify.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 84459D3D294A8EE900429C3D /* Shapify.xcdatamodeld */; };
@@ -62,10 +67,15 @@
 		3A5A779329807D0A006B8214 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		4E899A70A09E2BC8FB86458C /* Pods-Shapify.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shapify.debug.xcconfig"; path = "Target Support Files/Pods-Shapify/Pods-Shapify.debug.xcconfig"; sourceTree = "<group>"; };
 		60AD2862BA3E73EE5CC049DF /* Pods-Shapify.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shapify.release.xcconfig"; path = "Target Support Files/Pods-Shapify/Pods-Shapify.release.xcconfig"; sourceTree = "<group>"; };
+		8403EC25297814740017AD29 /* ResultsCollectionViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsCollectionViewHeader.swift; sourceTree = "<group>"; };
 		842E4CC0297304A900F4E230 /* AppTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabBarController.swift; sourceTree = "<group>"; };
 		843EFC32296C647F00BBDF47 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		843EFC34296C64F900BBDF47 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		843EFC36296C651100BBDF47 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		844142C72976BCC9002D3EED /* ResultsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewModel.swift; sourceTree = "<group>"; };
+		844142C92976BCE5002D3EED /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
+		844142CB2976BCFC002D3EED /* ResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsView.swift; sourceTree = "<group>"; };
+		844142CD2976E70B002D3EED /* ResultsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsCollectionViewCell.swift; sourceTree = "<group>"; };
 		844469E32975FE3C008B45B3 /* DateFormatterExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatterExtensions.swift; sourceTree = "<group>"; };
 		84459D22294A8E0700429C3D /* Shapify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shapify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84459D3C294A8EE800429C3D /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -164,17 +174,30 @@
 		843EFC31296C647300BBDF47 /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				843EFC36296C651100BBDF47 /* SearchViewModel.swift */,
 				843EFC32296C647F00BBDF47 /* SearchViewController.swift */,
 				843EFC34296C64F900BBDF47 /* SearchView.swift */,
-				843EFC36296C651100BBDF47 /* SearchViewModel.swift */,
 			);
 			path = Search;
+			sourceTree = "<group>";
+		};
+		844142C62976BCAF002D3EED /* Results */ = {
+			isa = PBXGroup;
+			children = (
+				844142C72976BCC9002D3EED /* ResultsViewModel.swift */,
+				844142C92976BCE5002D3EED /* ResultsViewController.swift */,
+				844142CB2976BCFC002D3EED /* ResultsView.swift */,
+				844142CD2976E70B002D3EED /* ResultsCollectionViewCell.swift */,
+				8403EC25297814740017AD29 /* ResultsCollectionViewHeader.swift */,
+			);
+			path = Results;
 			sourceTree = "<group>";
 		};
 		84459D19294A8E0700429C3D = {
 			isa = PBXGroup;
 			children = (
 				3A5A779129807C17006B8214 /* GoogleService-Info.plist */,
+				844142C62976BCAF002D3EED /* Results */,
 				847C67F7296F8297006CD678 /* Collection */,
 				843EFC31296C647300BBDF47 /* Search */,
 				84704DBE2968AD440008BF40 /* SignIn */,
@@ -414,21 +437,26 @@
 				84459D49294A8EEB00429C3D /* Shapify.xcdatamodeld in Sources */,
 				3A4A00D6298068B9001E70EF /* ProfileResponse.swift in Sources */,
 				842E4CC1297304A900F4E230 /* AppTabBarController.swift in Sources */,
+				844142CA2976BCE5002D3EED /* ResultsViewController.swift in Sources */,
 				8670D27829698A4100885A39 /* BaseViewController.swift in Sources */,
 				848BC88F2958FAD00090B4A8 /* PopupView.swift in Sources */,
 				84E66897294B28C6002A1587 /* FontExtensions.swift in Sources */,
 				848BC8882958F9F70090B4A8 /* UIViewControllerExtensions.swift in Sources */,
 				84704DC22968AD760008BF40 /* SignInViewController.swift in Sources */,
+				844142CC2976BCFC002D3EED /* ResultsView.swift in Sources */,
 				848BC88A2958FA1E0090B4A8 /* NumberExtensions.swift in Sources */,
 				848BC88C2958FA9D0090B4A8 /* Then.swift in Sources */,
 				843EFC33296C647F00BBDF47 /* SearchViewController.swift in Sources */,
+				844142C82976BCC9002D3EED /* ResultsViewModel.swift in Sources */,
 				843EFC35296C64F900BBDF47 /* SearchView.swift in Sources */,
 				3A5610DF29587EE5005F9760 /* AuthResponse.swift in Sources */,
 				3A2462852974862E0019B18E /* TrackResponse.swift in Sources */,
+				844142CE2976E70B002D3EED /* ResultsCollectionViewCell.swift in Sources */,
 				8670D27529635F7600885A39 /* RoundedButtonExtension.swift in Sources */,
 				3A5610DC29586F44005F9760 /* AuthViewController.swift in Sources */,
 				843EFC37296C651100BBDF47 /* SearchViewModel.swift in Sources */,
 				847C67F9296F82A9006CD678 /* CollectionViewController.swift in Sources */,
+				8403EC26297814740017AD29 /* ResultsCollectionViewHeader.swift in Sources */,
 				84704DC42968AD9E0008BF40 /* SignInView.swift in Sources */,
 				3A5610DA2957AE1F005F9760 /* Constants.swift in Sources */,
 				84459D48294A8EEB00429C3D /* SceneDelegate.swift in Sources */,
