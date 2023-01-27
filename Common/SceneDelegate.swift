@@ -15,17 +15,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             
             let window = UIWindow(windowScene: windowScene)
             window.overrideUserInterfaceStyle = .light
-            
-            if AuthManager.shared.isLoggedIn {
-                let tabBar = AppTabBarController()
-                window.rootViewController = tabBar
-            } else  {
-                let signInNavVc = UINavigationController(
-                    rootViewController: SignInViewController()
-                )
-                window.rootViewController = signInNavVc
-            }
-            
+            let signInNavVc = UINavigationController(
+                rootViewController: SignInViewController()
+            )
+            window.rootViewController = signInNavVc
             self.window = window
             window.makeKeyAndVisible()
         }
