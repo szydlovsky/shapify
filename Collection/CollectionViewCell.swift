@@ -107,25 +107,25 @@ final class CollectionViewCell: UICollectionViewCell {
         ])
     }
     
-    func fillWith(model: CollectionViewModel.CollectionCellModel, index: Int) {
+    func fillWith(tracks: [Track], index: Int) {
         let bgColor = UIColor.CollectionColor(at: index)
         let labelColor = bgColor.isLight() ? UIColor.shapifyBlack : UIColor.white
 
         bgView.backgroundColor = bgColor
 
-        dateLabel.text = DateFormatter.appFormatter.string(from: model.date)
+        dateLabel.text = tracks.first?.date ?? "Result"
         dateLabel.textColor = labelColor
         
         matchLabel.textColor = labelColor
         
-        titleLabel.text = model.tracks.first?.title ?? ""
+        titleLabel.text = tracks.first?.title ?? ""
         titleLabel.textColor = labelColor
 
-        artistLabel.text = model.tracks.first?.subtitle ?? ""
+        artistLabel.text = tracks.first?.subtitle ?? ""
         artistLabel.textColor = labelColor
 
         DispatchQueue.main.async { [weak self] in
-            self?.imageView.loadImage(urlString: model.tracks.first?.images?.coverart)
+            self?.imageView.loadImage(urlString: tracks.first?.images?.coverart)
         }
     }
 }

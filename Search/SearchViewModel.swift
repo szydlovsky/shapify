@@ -64,8 +64,7 @@ final class SearchViewModel {
         guard !currentTracks.isEmpty else { return }
         let vm = ResultsViewModel(
             tracks: currentTracks,
-            isPostSearch: true,
-            searchDate: Date()
+            isPostSearch: true
         )
         delegate?.showResults(vm)
     }
@@ -91,6 +90,7 @@ final class SearchViewModel {
                         if tracks.isEmpty {
                             self?.delegate?.showError(APICaller.NetworkingError.trackNotFound.localizedDescription)
                         }
+                        let currentDate = Date()
                         tracks.forEach { spotifyTrack in
                             let albumImage = spotifyTrack.album.images.first?.url ?? (track.images?.background ?? "")
                             let trackImage = spotifyTrack.album.images.first?.url ?? (track.images?.coverart ?? "")
@@ -100,7 +100,7 @@ final class SearchViewModel {
                                     subtitle: spotifyTrack.artists.first?.name ?? "No Artist",
                                     externalURL: spotifyTrack.external_urls.spotify,
                                     images: Images(background: albumImage, coverart: trackImage),
-                                    date: DateFormatter.appFormatter.string(from: Date())
+                                    date: DateFormatter.appFormatter.string(from: currentDate)
                                 )
                             )
                         }

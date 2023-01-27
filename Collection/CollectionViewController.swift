@@ -37,14 +37,16 @@ final class CollectionViewController: BaseViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        mainView.makeViewComponentsVisible(false)
-        SwiftLoader.show(title: "Fetching data...", animated: true)
-        viewModel.fetchCollectionData(completion: { [weak self] in
-            guard let self = self else { return }
-            SwiftLoader.hide()
-            self.mainView.makeViewComponentsVisible(true)
-            self.mainView.reloadCollection()
-        })
+        if DatabaseManager.shared.shouldFetch {
+            mainView.makeViewComponentsVisible(false)
+            SwiftLoader.show(title: "Fetching data...", animated: true)
+            viewModel.fetchCollectionData(completion: { [weak self] in
+                guard let self = self else { return }
+                SwiftLoader.hide()
+                self.mainView.makeViewComponentsVisible(true)
+                self.mainView.reloadCollection()
+            })
+        }
     }
 }
 
@@ -67,7 +69,7 @@ extension CollectionViewController: UICollectionViewDelegate, UICollectionViewDa
         }
         
         cell.fillWith(
-            model: viewModel.model(at: indexPath.row),
+            tracks: viewModel.tracks(at: indexPath.row),
             index: indexPath.row
         )
         
