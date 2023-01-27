@@ -75,12 +75,12 @@ class DatabaseManager {
         doesUserExist(with: safeEmail) { [weak self] exists in
             if exists {
                 self?.db.child(safeEmail).observeSingleEvent(of: .value) { snapshot in
-                    guard var userTracks = snapshot.value as? [[String: Any]] else {
+                    guard var userTracks = snapshot.value as? [[[String: Any]]] else {
                         completion(.wrongFormat)
                         return
                     }
                     
-                    userTracks += tracksToInsert
+                    userTracks.append(tracksToInsert)
 
                     self?.db.child(safeEmail).setValue(userTracks) { error, _ in
                         if error != nil {
@@ -92,7 +92,7 @@ class DatabaseManager {
                 }
             } else {
                 self?.db.child(safeEmail).setValue(
-                    tracksToInsert
+                    [tracksToInsert]
                 ) { error, _ in
                     if error != nil {
                         completion(.updatingTracks)
@@ -105,28 +105,30 @@ class DatabaseManager {
     }
     
     
-    public func getAllPreviousTracks(for userEmail: String, completion: @escaping (Result<[Track], DatabaseError>) -> ()) {
+    public func getAllPreviousTracks(for userEmail: String, completion: @escaping (Result<[[Track]], DatabaseError>) -> ()) {
         let safeEmail = DatabaseManager.safeEmail(emailAddress: userEmail)
         doesUserExist(with: safeEmail) { [weak self] exists in
             if exists {
                 self?.db.child(safeEmail).observeSingleEvent(of: .value) { snapshot in
-                    guard var userTracks = snapshot.value as? [[String: Any]] else {
+                    guard var userTracks = snapshot.value as? [[[String: Any]]] else {
                         completion(.failure(.wrongFormat))
                         return
                     }
-                    let tracks: [Track] = userTracks.compactMap { track in
-                        guard let title = track["title"] as? String, let subtitle = track["subtitle"] as? String, let link = track["link"] as? String, let image = track["image"] as? String, let date = track["date"] as? String else {
-                            completion(.failure(.argumentMissed))
-                            return nil
+                    let tracks: [[Track]] = userTracks.compactMap { trackGroup in
+                        return trackGroup.compactMap { track in
+                            guard let title = track["title"] as? String, let subtitle = track["subtitle"] as? String, let link = track["link"] as? String, let image = track["image"] as? String, let date = track["date"] as? String else {
+                                completion(.failure(.argumentMissed))
+                                return nil
+                            }
+                            let images: Images? = image.isEmpty ? nil : Images(background: image, coverart: image)
+                            return Track(title: title, subtitle: subtitle, externalURL: link, images: images, date: date)
                         }
-                        let images: Images? = image.isEmpty ? nil : Images(background: image, coverart: image)
-                        return Track(title: title, subtitle: subtitle, externalURL: link, images: images, date: date)
                     }
                     completion(.success(tracks))
                     self?.shouldFetch = false
                 }
             } else {
-                completion(.success([Track]()))
+                completion(.success([[Track]]()))
                 self?.shouldFetch = false
             }
         }
