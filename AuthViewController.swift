@@ -62,9 +62,6 @@ extension AuthViewController: WKNavigationDelegate {
             case .success(_):
                 DispatchQueue.main.async {
                     self?.navigationController?.popViewController(animated: true)
-                    let tabBar = AppTabBarController()
-                    tabBar.modalPresentationStyle = .fullScreen
-                    self?.present(tabBar, animated: false)
                 }
             case .failure(let error):
                 print(error.localizedDescription)

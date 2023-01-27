@@ -17,6 +17,7 @@ struct Track: Codable {
     let subtitle: String
     let externalURL: String?
     let images: Images?
+    let date: String?
 }
 
 struct TrackResponse: Codable {

@@ -22,4 +22,12 @@ final class SignInViewController: UIViewController {
             self?.push(vc)
         }
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if AuthManager.shared.isLoggedIn {
+            let tabBar = AppTabBarController()
+            tabBar.modalPresentationStyle = .fullScreen
+            present(tabBar, animated: false)
+        }
+    }
 }
