@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2161615AEE33BC3EE6E4A90E /* Pods_Shapify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3DC210013EE1E28575D01C1 /* Pods_Shapify.framework */; };
 		3A2462852974862E0019B18E /* TrackResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2462842974862E0019B18E /* TrackResponse.swift */; };
 		3A246287297832F30019B18E /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A246286297832F30019B18E /* APICaller.swift */; };
 		3A24628B297847E60019B18E /* FoundTracksResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A24628A297847E60019B18E /* FoundTracksResponse.swift */; };
@@ -16,6 +17,8 @@
 		3A5610DA2957AE1F005F9760 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5610D92957AE1E005F9760 /* Constants.swift */; };
 		3A5610DC29586F44005F9760 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5610DB29586F44005F9760 /* AuthViewController.swift */; };
 		3A5610DF29587EE5005F9760 /* AuthResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5610DE29587EE5005F9760 /* AuthResponse.swift */; };
+		3A5A779229807C17006B8214 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3A5A779129807C17006B8214 /* GoogleService-Info.plist */; };
+		3A5A779429807D0A006B8214 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5A779329807D0A006B8214 /* DatabaseManager.swift */; };
 		8403EC26297814740017AD29 /* ResultsCollectionViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8403EC25297814740017AD29 /* ResultsCollectionViewHeader.swift */; };
 		842E4CC1297304A900F4E230 /* AppTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842E4CC0297304A900F4E230 /* AppTabBarController.swift */; };
 		843EFC33296C647F00BBDF47 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843EFC32296C647F00BBDF47 /* SearchViewController.swift */; };
@@ -60,6 +63,10 @@
 		3A5610D92957AE1E005F9760 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3A5610DB29586F44005F9760 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		3A5610DE29587EE5005F9760 /* AuthResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResponse.swift; sourceTree = "<group>"; };
+		3A5A779129807C17006B8214 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3A5A779329807D0A006B8214 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		4E899A70A09E2BC8FB86458C /* Pods-Shapify.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shapify.debug.xcconfig"; path = "Target Support Files/Pods-Shapify/Pods-Shapify.debug.xcconfig"; sourceTree = "<group>"; };
+		60AD2862BA3E73EE5CC049DF /* Pods-Shapify.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shapify.release.xcconfig"; path = "Target Support Files/Pods-Shapify/Pods-Shapify.release.xcconfig"; sourceTree = "<group>"; };
 		8403EC25297814740017AD29 /* ResultsCollectionViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsCollectionViewHeader.swift; sourceTree = "<group>"; };
 		842E4CC0297304A900F4E230 /* AppTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabBarController.swift; sourceTree = "<group>"; };
 		843EFC32296C647F00BBDF47 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -94,6 +101,7 @@
 		84E66896294B28C6002A1587 /* FontExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontExtensions.swift; sourceTree = "<group>"; };
 		8670D27429635F7600885A39 /* RoundedButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButtonExtension.swift; sourceTree = "<group>"; };
 		8670D27729698A4100885A39 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		D3DC210013EE1E28575D01C1 /* Pods_Shapify.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Shapify.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,12 +109,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2161615AEE33BC3EE6E4A90E /* Pods_Shapify.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		03138F6A40E6E57D00C6578C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D3DC210013EE1E28575D01C1 /* Pods_Shapify.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		3A246288297847A50019B18E /* ShazamAPI */ = {
 			isa = PBXGroup;
 			children = (
@@ -131,6 +148,7 @@
 				3A5610D62957A8C3005F9760 /* AuthManager.swift */,
 				3A246286297832F30019B18E /* APICaller.swift */,
 				3A4A00D729806A2F001E70EF /* ProfileManager.swift */,
+				3A5A779329807D0A006B8214 /* DatabaseManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -178,6 +196,7 @@
 		84459D19294A8E0700429C3D = {
 			isa = PBXGroup;
 			children = (
+				3A5A779129807C17006B8214 /* GoogleService-Info.plist */,
 				844142C62976BCAF002D3EED /* Results */,
 				847C67F7296F8297006CD678 /* Collection */,
 				843EFC31296C647300BBDF47 /* Search */,
@@ -189,6 +208,8 @@
 				84E66895294B28B4002A1587 /* Supplementary */,
 				84459D50294A91DF00429C3D /* Common */,
 				84459D23294A8E0700429C3D /* Products */,
+				AE37DBAB3CEAF945C7EB9BA7 /* Pods */,
+				03138F6A40E6E57D00C6578C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -276,6 +297,15 @@
 			path = BaseViewController;
 			sourceTree = "<group>";
 		};
+		AE37DBAB3CEAF945C7EB9BA7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4E899A70A09E2BC8FB86458C /* Pods-Shapify.debug.xcconfig */,
+				60AD2862BA3E73EE5CC049DF /* Pods-Shapify.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -283,9 +313,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 84459D39294A8E0900429C3D /* Build configuration list for PBXNativeTarget "Shapify" */;
 			buildPhases = (
+				3E416320C79F09050C54F3E3 /* [CP] Check Pods Manifest.lock */,
 				84459D1E294A8E0700429C3D /* Sources */,
 				84459D1F294A8E0700429C3D /* Frameworks */,
 				84459D20294A8E0700429C3D /* Resources */,
+				84C9BC5584B64D09306841A9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -340,16 +372,60 @@
 				84E66894294B285F002A1587 /* Spoof-Bold.ttf in Resources */,
 				84459D4D294A8EEB00429C3D /* Assets.xcassets in Resources */,
 				84E66893294B285F002A1587 /* Spoof-Regular.ttf in Resources */,
+				3A5A779229807C17006B8214 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3E416320C79F09050C54F3E3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Shapify-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		84C9BC5584B64D09306841A9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Shapify/Pods-Shapify-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Shapify/Pods-Shapify-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Shapify/Pods-Shapify-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		84459D1E294A8E0700429C3D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A5A779429807D0A006B8214 /* DatabaseManager.swift in Sources */,
 				84704DC62968B19F0008BF40 /* UIViewExtensions.swift in Sources */,
 				3A4A00D829806A2F001E70EF /* ProfileManager.swift in Sources */,
 				84459D4E294A8EEB00429C3D /* AppDelegate.swift in Sources */,
@@ -508,6 +584,7 @@
 		};
 		84459D3A294A8E0900429C3D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E899A70A09E2BC8FB86458C /* Pods-Shapify.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -529,7 +606,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.notbad.Shapify;
+				PRODUCT_BUNDLE_IDENTIFIER = com.notbad.Shapify1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -540,6 +617,7 @@
 		};
 		84459D3B294A8E0900429C3D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 60AD2862BA3E73EE5CC049DF /* Pods-Shapify.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -561,7 +639,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.notbad.Shapify;
+				PRODUCT_BUNDLE_IDENTIFIER = com.notbad.Shapify1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
