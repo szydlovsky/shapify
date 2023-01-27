@@ -13,7 +13,6 @@ final class ResultsViewModel {
         let link: String?
     }
     
-    //TODO: - These models are placeholders
     private var models: [ResultCellModel]
     private let isPostSearch: Bool
     private let searchDate: Date?
