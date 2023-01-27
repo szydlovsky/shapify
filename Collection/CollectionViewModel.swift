@@ -8,10 +8,22 @@ final class CollectionViewModel {
     
     private var models: [[Track]] = []
     
-    func fetchCollectionData(completion: @escaping () -> ()) {
-        //TODO: - Make a call to firebase, fetch needed data, map it to models and call completion
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            completion()
+    func fetchCollectionData(completion: @escaping (DatabaseManager.DatabaseError?) -> ()) {
+        guard let email = ProfileManager.shared.profile?.email else {
+            completion(.argumentMissed)
+            return
+        }
+        DatabaseManager.shared.getAllPreviousTracks(for: email) { result in
+            switch result {
+            case .failure(let error):
+                completion(error)
+            case .success(let tracksCollection):
+                self.models = tracksCollection.sorted(by: {
+                    DateFormatter.appFormatter.date(from: $0.first!.date!)! >
+                    DateFormatter.appFormatter.date(from: $1.first!.date!)!
+                })
+                completion(nil)
+            }
         }
     }
     

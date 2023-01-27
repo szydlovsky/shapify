@@ -44,12 +44,12 @@ class DatabaseManager {
     
     private func doesUserExist(with email: String, completion: @escaping (Bool) -> ()) {
         let safeEmail = DatabaseManager.safeEmail(emailAddress: email)
-        db.child(safeEmail).observeSingleEvent(of: .value) { snapshot in
-            guard let _ = snapshot.value as? [String: Any] else {
+        db.observeSingleEvent(of: .value) { snapshot in
+            if snapshot.hasChild(safeEmail) {
+                completion(true)
+            } else {
                 completion(false)
-                return
             }
-            completion(true)
         }
     }
     

@@ -86,15 +86,16 @@ final class SearchViewModel {
                     case .failure(let error):
                         self?.delegate?.showError(error.localizedDescription)
                     case .success(let tracks):
-                        self?.currentTracks = []
+                        guard let self = self else { return }
+                        self.currentTracks = []
                         if tracks.isEmpty {
-                            self?.delegate?.showError(APICaller.NetworkingError.trackNotFound.localizedDescription)
+                            self.delegate?.showError(APICaller.NetworkingError.trackNotFound.localizedDescription)
                         }
                         let currentDate = Date()
                         tracks.forEach { spotifyTrack in
                             let albumImage = spotifyTrack.album.images.first?.url ?? (track.images?.background ?? "")
                             let trackImage = spotifyTrack.album.images.first?.url ?? (track.images?.coverart ?? "")
-                            self?.currentTracks.append(
+                            self.currentTracks.append(
                                 Track(
                                     title: spotifyTrack.name,
                                     subtitle: spotifyTrack.artists.first?.name ?? "No Artist",
@@ -103,6 +104,15 @@ final class SearchViewModel {
                                     date: DateFormatter.appFormatter.string(from: currentDate)
                                 )
                             )
+                        }
+                        DatabaseManager.shared.add(
+                            tracks: self.currentTracks,
+                            for: ProfileManager.shared.profile!.email
+                        ) { error in
+                            if let error = error {
+                                self.delegate?.showError(error.localizedDescription)
+                                self.currentTracks = []
+                            }
                         }
                     }
                     self?.resultsReady = true

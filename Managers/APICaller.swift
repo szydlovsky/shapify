@@ -101,24 +101,24 @@ final class APICaller {
         }
     }
     
-    public func getProfile(completion: @escaping (Result<Bool, NetworkingError>) -> () = {_ in }) {
+    public func getProfile(completion: @escaping (NetworkingError?) -> () = {_ in }) {
         let urlString = K.baseURL + "me"
         createRequest(with: urlString) { request in
             guard let request = request else {
-                completion(.failure(.requestInit))
+                completion(.requestInit)
                 return
             }
             URLSession.shared.dataTask(with: request) { data, _, error in
                 guard let data = data, error == nil else {
-                    completion(.failure(.gettingData))
+                    completion(.gettingData)
                     return
                 }
                 do {
                     let result = try JSONDecoder().decode(ProfileResponse.self, from: data)
                     ProfileManager.shared.profile = ProfileManager.Profile(imageURL: result.images.first?.url, username: result.display_name, email: result.email)
-                    completion(.success(true))
+                    completion(nil)
                 } catch {
-                    completion(.failure(.decoding))
+                    completion(.decoding)
                 }
             }.resume()
         }

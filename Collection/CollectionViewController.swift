@@ -40,9 +40,13 @@ final class CollectionViewController: BaseViewController {
         if DatabaseManager.shared.shouldFetch {
             mainView.makeViewComponentsVisible(false)
             SwiftLoader.show(title: "Fetching data...", animated: true)
-            viewModel.fetchCollectionData(completion: { [weak self] in
+            viewModel.fetchCollectionData(completion: { [weak self] error in
                 guard let self = self else { return }
                 SwiftLoader.hide()
+                if let error = error {
+                    self.showPopup(message: error.localizedDescription, buttonTitle: "Ok")
+                    return
+                }
                 self.mainView.makeViewComponentsVisible(true)
                 self.mainView.reloadCollection()
             })

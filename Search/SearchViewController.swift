@@ -23,8 +23,22 @@ final class SearchViewController: BaseViewController {
         view = mainView
     }
     
+    private func tryGettingUsersProfile() {
+        APICaller.shared.getProfile() { [weak self] error in
+            if let _ = error {
+                self?.showPopup(
+                    message: "Network connection failed",
+                    buttonTitle: "Retry", action: {
+                        self?.tryGettingUsersProfile()
+                    })
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tryGettingUsersProfile()
         
         let recordingSession = AVAudioSession.sharedInstance()
         do {

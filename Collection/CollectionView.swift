@@ -33,6 +33,7 @@ final class CollectionView: BaseView {
             CollectionViewCell.self,
             forCellWithReuseIdentifier: CollectionViewCell.identifier
         )
+        $0.showsVerticalScrollIndicator = false
     }
     
     override init() {

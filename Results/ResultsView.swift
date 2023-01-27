@@ -52,6 +52,7 @@ final class ResultsView: BaseView {
             forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
             withReuseIdentifier: ResultsCollectionViewHeader.identifier
         )
+        $0.showsVerticalScrollIndicator = false
     }
     
     init(title: String) {
