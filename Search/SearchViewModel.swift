@@ -99,7 +99,8 @@ final class SearchViewModel {
                                     title: spotifyTrack.name,
                                     subtitle: spotifyTrack.artists.first?.name ?? "No Artist",
                                     externalURL: spotifyTrack.external_urls.spotify,
-                                    images: Images(background: albumImage, coverart: trackImage)
+                                    images: Images(background: albumImage, coverart: trackImage),
+                                    date: DateFormatter.appFormatter.string(from: Date())
                                 )
                             )
                         }
