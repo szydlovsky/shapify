@@ -34,13 +34,32 @@ extension UICollectionViewLayout {
         scrollDirection: UICollectionView.ScrollDirection = .vertical,
         minimumSpacing: CGFloat,
         cellSize: CGSize,
-        headerSize: CGSize
+        headerSize: CGSize? = nil
     ) -> UICollectionViewFlowLayout {
         return UICollectionViewFlowLayout().then {
             $0.scrollDirection = scrollDirection
             $0.minimumLineSpacing = minimumSpacing
             $0.itemSize = cellSize
-            $0.headerReferenceSize = headerSize
+            if let size = headerSize {
+                $0.headerReferenceSize = size
+            }
+        }
+    }
+}
+
+extension UIImageView {
+    
+    func loadImage(urlString: String?) {
+        self.image = UIImage(named: "collection")
+        
+        guard let url = URL(string: urlString ?? "") else {
+            return
+        }
+        
+        if let data = try? Data(contentsOf: url) {
+            if let image = UIImage(data: data) {
+                self.image = image
+            }
         }
     }
 }

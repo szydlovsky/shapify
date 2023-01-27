@@ -44,6 +44,9 @@
 		848BC88F2958FAD00090B4A8 /* PopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848BC88E2958FAD00090B4A8 /* PopupView.swift */; };
 		848BC8912958FAFA0090B4A8 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848BC8902958FAFA0090B4A8 /* BaseView.swift */; };
 		848BC8932958FFCC0090B4A8 /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848BC8922958FFCC0090B4A8 /* PopupViewController.swift */; };
+		84A207AB2984307600CF738B /* CollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A207AA2984307600CF738B /* CollectionViewModel.swift */; };
+		84A207AD2984308300CF738B /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A207AC2984308300CF738B /* CollectionView.swift */; };
+		84A207AF2984309900CF738B /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A207AE2984309900CF738B /* CollectionViewCell.swift */; };
 		84E6688F294B27B4002A1587 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84459D41294A8EE900429C3D /* LaunchScreen.storyboard */; };
 		84E66890294B27B4002A1587 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84459D43294A8EE900429C3D /* Main.storyboard */; };
 		84E66893294B285F002A1587 /* Spoof-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84E66891294B285F002A1587 /* Spoof-Regular.ttf */; };
@@ -96,6 +99,9 @@
 		848BC88E2958FAD00090B4A8 /* PopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupView.swift; sourceTree = "<group>"; };
 		848BC8902958FAFA0090B4A8 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		848BC8922958FFCC0090B4A8 /* PopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
+		84A207AA2984307600CF738B /* CollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewModel.swift; sourceTree = "<group>"; };
+		84A207AC2984308300CF738B /* CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionView.swift; sourceTree = "<group>"; };
+		84A207AE2984309900CF738B /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		84E66891294B285F002A1587 /* Spoof-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Spoof-Regular.ttf"; sourceTree = "<group>"; };
 		84E66892294B285F002A1587 /* Spoof-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Spoof-Bold.ttf"; sourceTree = "<group>"; };
 		84E66896294B28C6002A1587 /* FontExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontExtensions.swift; sourceTree = "<group>"; };
@@ -248,7 +254,10 @@
 		847C67F7296F8297006CD678 /* Collection */ = {
 			isa = PBXGroup;
 			children = (
+				84A207AA2984307600CF738B /* CollectionViewModel.swift */,
 				847C67F8296F82A9006CD678 /* CollectionViewController.swift */,
+				84A207AC2984308300CF738B /* CollectionView.swift */,
+				84A207AE2984309900CF738B /* CollectionViewCell.swift */,
 			);
 			path = Collection;
 			sourceTree = "<group>";
@@ -435,6 +444,7 @@
 				844469E42975FE3C008B45B3 /* DateFormatterExtensions.swift in Sources */,
 				848BC8932958FFCC0090B4A8 /* PopupViewController.swift in Sources */,
 				84459D49294A8EEB00429C3D /* Shapify.xcdatamodeld in Sources */,
+				84A207AF2984309900CF738B /* CollectionViewCell.swift in Sources */,
 				3A4A00D6298068B9001E70EF /* ProfileResponse.swift in Sources */,
 				842E4CC1297304A900F4E230 /* AppTabBarController.swift in Sources */,
 				844142CA2976BCE5002D3EED /* ResultsViewController.swift in Sources */,
@@ -443,6 +453,7 @@
 				84E66897294B28C6002A1587 /* FontExtensions.swift in Sources */,
 				848BC8882958F9F70090B4A8 /* UIViewControllerExtensions.swift in Sources */,
 				84704DC22968AD760008BF40 /* SignInViewController.swift in Sources */,
+				84A207AD2984308300CF738B /* CollectionView.swift in Sources */,
 				844142CC2976BCFC002D3EED /* ResultsView.swift in Sources */,
 				848BC88A2958FA1E0090B4A8 /* NumberExtensions.swift in Sources */,
 				848BC88C2958FA9D0090B4A8 /* Then.swift in Sources */,
@@ -459,6 +470,7 @@
 				8403EC26297814740017AD29 /* ResultsCollectionViewHeader.swift in Sources */,
 				84704DC42968AD9E0008BF40 /* SignInView.swift in Sources */,
 				3A5610DA2957AE1F005F9760 /* Constants.swift in Sources */,
+				84A207AB2984307600CF738B /* CollectionViewModel.swift in Sources */,
 				84459D48294A8EEB00429C3D /* SceneDelegate.swift in Sources */,
 				848BC8862958F5E90090B4A8 /* ColorExtensions.swift in Sources */,
 				848BC8912958FAFA0090B4A8 /* BaseView.swift in Sources */,

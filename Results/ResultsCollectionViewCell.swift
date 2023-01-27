@@ -98,21 +98,7 @@ final class ResultsCollectionViewCell: UICollectionViewCell {
         spotifyLink = model.link
         
         DispatchQueue.main.async { [weak self] in
-            self?.loadImage(urlString: model.image)
-        }
-    }
-    
-    private func loadImage(urlString: String?) {
-        imageView.image = UIImage(named: "collection")
-        
-        guard let url = URL(string: urlString ?? "") else {
-            return
-        }
-        
-        if let data = try? Data(contentsOf: url) {
-            if let image = UIImage(data: data) {
-                self.imageView.image = image
-            }
+            self?.imageView.loadImage(urlString: model.image)
         }
     }
     

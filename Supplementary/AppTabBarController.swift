@@ -34,7 +34,9 @@ final class AppTabBarController: UITabBarController {
         
         //Collection
         let collectionNav = UINavigationController(
-            rootViewController: CollectionViewController()
+            rootViewController: CollectionViewController(
+                viewModel: CollectionViewModel()
+            )
         )
         let collectionImg = UIImage(named: "collection")?.withRenderingMode(.alwaysOriginal)
         let collectionSelectedImg = UIImage(named: "collectionSelected")?.withRenderingMode(.alwaysOriginal)

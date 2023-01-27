@@ -13,13 +13,12 @@ final class ResultsViewModel {
         let link: String?
     }
     
-    //TODO: - These models are placeholders
     private var models: [ResultCellModel]
     private let isPostSearch: Bool
-    private let searchDate: Date?
     private let originIdx: Int?
+    private let searchDate: String?
     
-    init(tracks: [Track], isPostSearch: Bool, searchDate: Date? = nil, originIdx: Int? = nil) {
+    init(tracks: [Track], isPostSearch: Bool, originIdx: Int? = nil) {
         self.models = tracks.map({
             ResultCellModel(
                 image: $0.images?.coverart,
@@ -29,10 +28,8 @@ final class ResultsViewModel {
             )
         })
         self.isPostSearch = isPostSearch
-        self.searchDate = searchDate
         self.originIdx = originIdx
-        
-        //TODO: - Save search results to firebase
+        self.searchDate = tracks.first?.date
     }
     
     func model(at idx: Int) -> ResultCellModel {
@@ -53,7 +50,7 @@ final class ResultsViewModel {
         isPostSearch
             ? "Here are Your\nResults!"
             : searchDate != nil
-                ? "Results from\n" + DateFormatter.appFormatter.string(from: searchDate!)
+                ? "Results from\n" + searchDate!
                 : "Here are Your\nResults!"
     }
 }

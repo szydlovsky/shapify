@@ -8,4 +8,5 @@ target 'Shapify' do
   # Pods for Shapify
   pod 'FirebaseDatabase'
   pod 'FirebaseCore'
+  pod 'SwiftLoader', '1.0.0'
 end

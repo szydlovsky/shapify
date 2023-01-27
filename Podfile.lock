@@ -15,10 +15,12 @@ PODS:
   - "GoogleUtilities/NSData+zlib (7.10.0)"
   - leveldb-library (1.22.1)
   - PromisesObjC (2.1.1)
+  - SwiftLoader (1.0.0)
 
 DEPENDENCIES:
   - FirebaseCore
   - FirebaseDatabase
+  - SwiftLoader (= 1.0.0)
 
 SPEC REPOS:
   trunk:
@@ -28,6 +30,7 @@ SPEC REPOS:
     - GoogleUtilities
     - leveldb-library
     - PromisesObjC
+    - SwiftLoader
 
 SPEC CHECKSUMS:
   FirebaseCore: 988754646ab3bd4bdcb740f1bfe26b9f6c0d5f2a
@@ -36,7 +39,8 @@ SPEC CHECKSUMS:
   GoogleUtilities: bad72cb363809015b1f7f19beb1f1cd23c589f95
   leveldb-library: 50c7b45cbd7bf543c81a468fe557a16ae3db8729
   PromisesObjC: ab77feca74fa2823e7af4249b8326368e61014cb
+  SwiftLoader: f12f3a6fb42576862a3a5eb80c7e59fc881b6982
 
-PODFILE CHECKSUM: 94c1f557ea5dc3bb28e111179591efa5992c5aea
+PODFILE CHECKSUM: fbabb3badf47c3f7cd31fa4e6502644175902c04
 
 COCOAPODS: 1.11.3

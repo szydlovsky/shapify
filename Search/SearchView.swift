@@ -72,7 +72,7 @@ final class SearchView: BaseView {
             infoLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
             infoLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: Constants.defaultMargin),
             infoLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -Constants.defaultMargin),
-            infoLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 2 * Constants.defaultMargin),
+            infoLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: Constants.defaultMargin),
             
             outerCircle.centerXAnchor.constraint(equalTo: centerXAnchor),
             outerCircle.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 2 * Constants.defaultMargin + .screenHeight * 0.2),
