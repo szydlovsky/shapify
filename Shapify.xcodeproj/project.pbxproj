@@ -52,6 +52,8 @@
 		84E66893294B285F002A1587 /* Spoof-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84E66891294B285F002A1587 /* Spoof-Regular.ttf */; };
 		84E66894294B285F002A1587 /* Spoof-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84E66892294B285F002A1587 /* Spoof-Bold.ttf */; };
 		84E66897294B28C6002A1587 /* FontExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E66896294B28C6002A1587 /* FontExtensions.swift */; };
+		864371062986D9B000E9E948 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864371052986D9B000E9E948 /* SettingsView.swift */; };
+		8643710B2986E4DB00E9E948 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8643710A2986E4DB00E9E948 /* SettingsViewController.swift */; };
 		8670D27529635F7600885A39 /* RoundedButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8670D27429635F7600885A39 /* RoundedButtonExtension.swift */; };
 		8670D27829698A4100885A39 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8670D27729698A4100885A39 /* BaseViewController.swift */; };
 /* End PBXBuildFile section */
@@ -105,6 +107,8 @@
 		84E66891294B285F002A1587 /* Spoof-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Spoof-Regular.ttf"; sourceTree = "<group>"; };
 		84E66892294B285F002A1587 /* Spoof-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Spoof-Bold.ttf"; sourceTree = "<group>"; };
 		84E66896294B28C6002A1587 /* FontExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontExtensions.swift; sourceTree = "<group>"; };
+		864371052986D9B000E9E948 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		8643710A2986E4DB00E9E948 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		8670D27429635F7600885A39 /* RoundedButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButtonExtension.swift; sourceTree = "<group>"; };
 		8670D27729698A4100885A39 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		D3DC210013EE1E28575D01C1 /* Pods_Shapify.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Shapify.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -211,6 +215,7 @@
 				3A5610DB29586F44005F9760 /* AuthViewController.swift */,
 				3A5610D92957AE1E005F9760 /* Constants.swift */,
 				3A5610D52957A8B6005F9760 /* Managers */,
+				864371042986D8DF00E9E948 /* Settings */,
 				84E66895294B28B4002A1587 /* Supplementary */,
 				84459D50294A91DF00429C3D /* Common */,
 				84459D23294A8E0700429C3D /* Products */,
@@ -288,6 +293,15 @@
 				844469E32975FE3C008B45B3 /* DateFormatterExtensions.swift */,
 			);
 			path = Supplementary;
+			sourceTree = "<group>";
+		};
+		864371042986D8DF00E9E948 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				864371052986D9B000E9E948 /* SettingsView.swift */,
+				8643710A2986E4DB00E9E948 /* SettingsViewController.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 		8670D27329635EDC00885A39 /* Button */ = {
@@ -439,6 +453,7 @@
 				3A4A00D829806A2F001E70EF /* ProfileManager.swift in Sources */,
 				84459D4E294A8EEB00429C3D /* AppDelegate.swift in Sources */,
 				3A5610D72957A8C3005F9760 /* AuthManager.swift in Sources */,
+				864371062986D9B000E9E948 /* SettingsView.swift in Sources */,
 				3A24628B297847E60019B18E /* FoundTracksResponse.swift in Sources */,
 				3A246287297832F30019B18E /* APICaller.swift in Sources */,
 				844469E42975FE3C008B45B3 /* DateFormatterExtensions.swift in Sources */,
@@ -456,6 +471,7 @@
 				84A207AD2984308300CF738B /* CollectionView.swift in Sources */,
 				844142CC2976BCFC002D3EED /* ResultsView.swift in Sources */,
 				848BC88A2958FA1E0090B4A8 /* NumberExtensions.swift in Sources */,
+				8643710B2986E4DB00E9E948 /* SettingsViewController.swift in Sources */,
 				848BC88C2958FA9D0090B4A8 /* Then.swift in Sources */,
 				843EFC33296C647F00BBDF47 /* SearchViewController.swift in Sources */,
 				844142C82976BCC9002D3EED /* ResultsViewModel.swift in Sources */,

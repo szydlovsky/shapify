@@ -22,10 +22,16 @@ class BaseViewController: UIViewController {
         setUpSettingsBarButton()
     }
     
+    @objc private func settingsTapped() {
+        let settingsVC = SettingsViewController()
+        navigationController?.pushViewController(settingsVC, animated: true)
+    }
+    
     func setUpSettingsBarButton() {
         let button = UIButton(type: .system)
         button.setBackgroundImage(UIImage(named: "customerIcon"), for: .normal)
         button.tintColor = .black
+        button.addTarget(self, action: #selector(settingsTapped), for: .touchUpInside)
         let barButton = UIBarButtonItem(customView: button)
         barButton.customView?.setHeight(44)
         barButton.customView?.setWidth(44)
