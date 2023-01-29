@@ -4,7 +4,7 @@
 
 import UIKit
 
-final class SettingsView: UIView {
+final class SettingsView: BaseView {
     
     private let infoLabel = UILabel().then {
         $0.translatesAutoresizingMaskIntoConstraints = false
@@ -52,15 +52,11 @@ final class SettingsView: UIView {
         $0.setUpRoundedButton(title: "Log out")
     }
     
-    public init() {
-        super.init(frame: .zero)
+    override init() {
+        super.init()
         setUp()
     }
-    
-    @available(*, unavailable)
-    
-    required public init?(coder: NSCoder) { nil }
-    
+
     private func setUp() {
         backgroundColor = .shapifyLightBackground
         
