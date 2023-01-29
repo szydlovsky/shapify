@@ -64,7 +64,7 @@ final class SettingsView: UIView {
     private func setUp() {
         backgroundColor = .shapifyLightBackground
         
-        addSubviews([infoLabel ,profilePicture, usernameLabel, emailLabel, logOutButton])
+        addSubviews([infoLabel, profilePicture, usernameLabel, emailLabel, logOutButton])
         
         NSLayoutConstraint.activate([
             infoLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
