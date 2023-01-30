@@ -10,21 +10,31 @@ import Foundation
 class ProfileManager {
     
     struct Profile {
-        let imageURL: String?
-        let username: String
-        let email: String
+        var imageURL: String?
+        var username: String
+        var email: String
     }
     
     static var shared = ProfileManager()
     
-    public var profile: Profile?
+    public var profile: Profile? {
+        didSet {
+            if let email = profile?.email, let username = profile?.username {
+                UserDefaults.standard.set(email, forKey: "email")
+                UserDefaults.standard.set(username, forKey: "username")
+            }
+            if let imageURL = profile?.imageURL {
+                UserDefaults.standard.set(imageURL, forKey: "imageURL")
+            }
+        }
+    }
     
     private init(){}
     
-    public func signOut() {
-        profile = nil
-        UserDefaults.standard.set(nil, forKey: "expiration_date")
-        UserDefaults.standard.set(nil, forKey: "access_token")
-        UserDefaults.standard.set(nil, forKey: "refresh_token")
+    public func setProfile() {
+        guard let email = UserDefaults.standard.value(forKey: "email") as? String, let username = UserDefaults.standard.value(forKey: "username") as? String else {
+            return
+        }
+        profile = Profile(imageURL: UserDefaults.standard.value(forKey: "imageURL") as? String, username: username, email: email)
     }
 }

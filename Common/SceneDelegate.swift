@@ -22,6 +22,20 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             self.window = window
             window.makeKeyAndVisible()
         }
+        recognizeIfRunFromWidget(contexts: connectionOptions.urlContexts)
+    }
+    
+    func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
+        recognizeIfRunFromWidget(contexts: URLContexts)
+    }
+    
+    private func recognizeIfRunFromWidget(contexts URLContexts: Set<UIOpenURLContext>) {
+        guard let _: UIOpenURLContext = URLContexts.first(where: { $0.url.scheme == "widget-deeplink" }) else {
+            return
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            NotificationCenter.default.post(name: NSNotification.Name("widgetTapped"), object: nil)
+        }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

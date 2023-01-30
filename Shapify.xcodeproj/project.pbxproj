@@ -13,6 +13,13 @@
 		3A24628B297847E60019B18E /* FoundTracksResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A24628A297847E60019B18E /* FoundTracksResponse.swift */; };
 		3A4A00D6298068B9001E70EF /* ProfileResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4A00D5298068B9001E70EF /* ProfileResponse.swift */; };
 		3A4A00D829806A2F001E70EF /* ProfileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4A00D729806A2F001E70EF /* ProfileManager.swift */; };
+		3A4C87BC298730AD00E17E19 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A4C87BB298730AD00E17E19 /* WidgetKit.framework */; };
+		3A4C87BE298730AD00E17E19 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A4C87BD298730AD00E17E19 /* SwiftUI.framework */; };
+		3A4C87C1298730AD00E17E19 /* RecognizeSongWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4C87C0298730AD00E17E19 /* RecognizeSongWidgetBundle.swift */; };
+		3A4C87C3298730AD00E17E19 /* RecognizeSongWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4C87C2298730AD00E17E19 /* RecognizeSongWidget.swift */; };
+		3A4C87C5298730AE00E17E19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A4C87C4298730AE00E17E19 /* Assets.xcassets */; };
+		3A4C87C9298730AE00E17E19 /* RecognizeSongWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 3A4C87BA298730AD00E17E19 /* RecognizeSongWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		3A4C87CE29873FC900E17E19 /* Spoof-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84E66891294B285F002A1587 /* Spoof-Regular.ttf */; };
 		3A5610D72957A8C3005F9760 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5610D62957A8C3005F9760 /* AuthManager.swift */; };
 		3A5610DA2957AE1F005F9760 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5610D92957AE1E005F9760 /* Constants.swift */; };
 		3A5610DC29586F44005F9760 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5610DB29586F44005F9760 /* AuthViewController.swift */; };
@@ -58,12 +65,43 @@
 		8670D27829698A4100885A39 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8670D27729698A4100885A39 /* BaseViewController.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		3A4C87C7298730AE00E17E19 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84459D1A294A8E0700429C3D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3A4C87B9298730AD00E17E19;
+			remoteInfo = RecognizeSongWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3A4C87CA298730AE00E17E19 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				3A4C87C9298730AE00E17E19 /* RecognizeSongWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		3A2462842974862E0019B18E /* TrackResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackResponse.swift; sourceTree = "<group>"; };
 		3A246286297832F30019B18E /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
 		3A24628A297847E60019B18E /* FoundTracksResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoundTracksResponse.swift; sourceTree = "<group>"; };
 		3A4A00D5298068B9001E70EF /* ProfileResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileResponse.swift; sourceTree = "<group>"; };
 		3A4A00D729806A2F001E70EF /* ProfileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileManager.swift; sourceTree = "<group>"; };
+		3A4C87BA298730AD00E17E19 /* RecognizeSongWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = RecognizeSongWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A4C87BB298730AD00E17E19 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		3A4C87BD298730AD00E17E19 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		3A4C87C0298730AD00E17E19 /* RecognizeSongWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecognizeSongWidgetBundle.swift; sourceTree = "<group>"; };
+		3A4C87C2298730AD00E17E19 /* RecognizeSongWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecognizeSongWidget.swift; sourceTree = "<group>"; };
+		3A4C87C4298730AE00E17E19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3A4C87C6298730AE00E17E19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A5610D62957A8C3005F9760 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		3A5610D92957AE1E005F9760 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3A5610DB29586F44005F9760 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
@@ -115,6 +153,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		3A4C87B7298730AD00E17E19 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A4C87BE298730AD00E17E19 /* SwiftUI.framework in Frameworks */,
+				3A4C87BC298730AD00E17E19 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		84459D1F294A8E0700429C3D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -130,6 +177,8 @@
 			isa = PBXGroup;
 			children = (
 				D3DC210013EE1E28575D01C1 /* Pods_Shapify.framework */,
+				3A4C87BB298730AD00E17E19 /* WidgetKit.framework */,
+				3A4C87BD298730AD00E17E19 /* SwiftUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -150,6 +199,17 @@
 				3A4A00D5298068B9001E70EF /* ProfileResponse.swift */,
 			);
 			path = SpotifyAPI;
+			sourceTree = "<group>";
+		};
+		3A4C87BF298730AD00E17E19 /* RecognizeSongWidget */ = {
+			isa = PBXGroup;
+			children = (
+				3A4C87C0298730AD00E17E19 /* RecognizeSongWidgetBundle.swift */,
+				3A4C87C2298730AD00E17E19 /* RecognizeSongWidget.swift */,
+				3A4C87C4298730AE00E17E19 /* Assets.xcassets */,
+				3A4C87C6298730AE00E17E19 /* Info.plist */,
+			);
+			path = RecognizeSongWidget;
 			sourceTree = "<group>";
 		};
 		3A5610D52957A8B6005F9760 /* Managers */ = {
@@ -218,6 +278,7 @@
 				864371042986D8DF00E9E948 /* Settings */,
 				84E66895294B28B4002A1587 /* Supplementary */,
 				84459D50294A91DF00429C3D /* Common */,
+				3A4C87BF298730AD00E17E19 /* RecognizeSongWidget */,
 				84459D23294A8E0700429C3D /* Products */,
 				AE37DBAB3CEAF945C7EB9BA7 /* Pods */,
 				03138F6A40E6E57D00C6578C /* Frameworks */,
@@ -228,6 +289,7 @@
 			isa = PBXGroup;
 			children = (
 				84459D22294A8E0700429C3D /* Shapify.app */,
+				3A4C87BA298730AD00E17E19 /* RecognizeSongWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -332,6 +394,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		3A4C87B9298730AD00E17E19 /* RecognizeSongWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3A4C87CD298730AE00E17E19 /* Build configuration list for PBXNativeTarget "RecognizeSongWidgetExtension" */;
+			buildPhases = (
+				3A4C87B6298730AD00E17E19 /* Sources */,
+				3A4C87B7298730AD00E17E19 /* Frameworks */,
+				3A4C87B8298730AD00E17E19 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RecognizeSongWidgetExtension;
+			productName = RecognizeSongWidgetExtension;
+			productReference = 3A4C87BA298730AD00E17E19 /* RecognizeSongWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		84459D21294A8E0700429C3D /* Shapify */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 84459D39294A8E0900429C3D /* Build configuration list for PBXNativeTarget "Shapify" */;
@@ -341,10 +420,12 @@
 				84459D1F294A8E0700429C3D /* Frameworks */,
 				84459D20294A8E0700429C3D /* Resources */,
 				84C9BC5584B64D09306841A9 /* [CP] Embed Pods Frameworks */,
+				3A4C87CA298730AE00E17E19 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				3A4C87C8298730AE00E17E19 /* PBXTargetDependency */,
 			);
 			name = Shapify;
 			productName = Shapify;
@@ -358,9 +439,12 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1400;
+				LastSwiftUpdateCheck = 1420;
 				LastUpgradeCheck = 1400;
 				TargetAttributes = {
+					3A4C87B9298730AD00E17E19 = {
+						CreatedOnToolsVersion = 14.2;
+					};
 					84459D21294A8E0700429C3D = {
 						CreatedOnToolsVersion = 14.0.1;
 						LastSwiftMigration = 1400;
@@ -381,11 +465,21 @@
 			projectRoot = "";
 			targets = (
 				84459D21294A8E0700429C3D /* Shapify */,
+				3A4C87B9298730AD00E17E19 /* RecognizeSongWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		3A4C87B8298730AD00E17E19 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A4C87C5298730AE00E17E19 /* Assets.xcassets in Resources */,
+				3A4C87CE29873FC900E17E19 /* Spoof-Regular.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		84459D20294A8E0700429C3D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -444,6 +538,15 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		3A4C87B6298730AD00E17E19 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A4C87C1298730AD00E17E19 /* RecognizeSongWidgetBundle.swift in Sources */,
+				3A4C87C3298730AD00E17E19 /* RecognizeSongWidget.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		84459D1E294A8E0700429C3D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -495,7 +598,71 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		3A4C87C8298730AE00E17E19 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3A4C87B9298730AD00E17E19 /* RecognizeSongWidgetExtension */;
+			targetProxy = 3A4C87C7298730AE00E17E19 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		3A4C87CB298730AE00E17E19 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = S5766AV554;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RecognizeSongWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = RecognizeSongWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.notbad.Shapify1.RecognizeSongWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3A4C87CC298730AE00E17E19 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = S5766AV554;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RecognizeSongWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = RecognizeSongWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.notbad.Shapify1.RecognizeSongWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		84459D37294A8E0900429C3D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -614,6 +781,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4E899A70A09E2BC8FB86458C /* Pods-Shapify.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
@@ -647,6 +815,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 60AD2862BA3E73EE5CC049DF /* Pods-Shapify.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
@@ -678,6 +847,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		3A4C87CD298730AE00E17E19 /* Build configuration list for PBXNativeTarget "RecognizeSongWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A4C87CB298730AE00E17E19 /* Debug */,
+				3A4C87CC298730AE00E17E19 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		84459D1D294A8E0700429C3D /* Build configuration list for PBXProject "Shapify" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

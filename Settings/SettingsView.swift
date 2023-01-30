@@ -17,14 +17,11 @@ final class SettingsView: BaseView {
     
     private let profilePicture = UIImageView().then {
         $0.translatesAutoresizingMaskIntoConstraints = false
-        let urlString = ProfileManager.shared.profile?.imageURL
-        let url = URL(string: urlString!)!
-        let data = try? Data(contentsOf: url)
-            if let data = data {
-                $0.image = UIImage(data: data)
-            } else {
-                $0.image = UIImage(named: "customerIcon")
-            }
+        if let urlString = ProfileManager.shared.profile?.imageURL, let url = URL(string: urlString), let data = try? Data(contentsOf: url) {
+            $0.image = UIImage(data: data)
+        } else {
+            $0.image = UIImage(named: "customerIcon")
+        }
         $0.setWidth(0.5 * .screenWidth)
         $0.layer.cornerRadius = 0.25 * .screenWidth
         $0.clipsToBounds = true
