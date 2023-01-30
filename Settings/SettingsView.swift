@@ -85,20 +85,20 @@ final class SettingsView: BaseView {
             infoLabel.trailingAnchor.constraint(equalTo: cutView.trailingAnchor, constant: -Constants.defaultMargin),
             infoLabel.topAnchor.constraint(equalTo: upperRect.bottomAnchor, constant: Constants.defaultMargin),
             
-            profilePicture.centerXAnchor.constraint(equalTo: centerXAnchor),
+            profilePicture.centerXAnchor.constraint(equalTo: cutView.centerXAnchor),
             profilePicture.topAnchor.constraint(equalTo: infoLabel.bottomAnchor, constant: .screenHeight * 0.1),
             
-            usernameLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
-            usernameLabel.topAnchor.constraint(equalTo: profilePicture.bottomAnchor, constant: .screenHeight * 0.1),
+            usernameLabel.centerXAnchor.constraint(equalTo: cutView.centerXAnchor),
+            usernameLabel.topAnchor.constraint(equalTo: profilePicture.bottomAnchor, constant: .screenHeight * 0.06),
             usernameLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: Constants.defaultMargin),
             usernameLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -Constants.defaultMargin),
             
-            emailLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
-            emailLabel.topAnchor.constraint(equalTo: usernameLabel.bottomAnchor, constant: .screenHeight * 0.05),
+            emailLabel.centerXAnchor.constraint(equalTo: cutView.centerXAnchor),
+            emailLabel.topAnchor.constraint(equalTo: usernameLabel.bottomAnchor, constant: .screenHeight * 0.03),
             emailLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: Constants.defaultMargin),
             emailLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -Constants.defaultMargin),
             
-            logOutButton.centerXAnchor.constraint(equalTo: centerXAnchor),
+            logOutButton.centerXAnchor.constraint(equalTo: cutView.centerXAnchor),
             logOutButton.bottomAnchor.constraint(equalTo: cutView.bottomAnchor, constant: -0.075 * .screenHeight)
         ])
     }
