@@ -24,7 +24,15 @@ class SettingsViewController: UIViewController {
     }
     
     @objc private func logOutPressed() {
-        let action = AuthManager.shared.signOut
+        let action = {
+            AuthManager.shared.signOut()
+            if let tabBar = self.presentingViewController,
+               let signIn = tabBar.presentingViewController
+            {
+                tabBar.dismiss(animated: false)
+                signIn.dismiss(animated: true)
+            }
+        }
         self.showPopup(message: "Do you really want to log out?", buttonTitle: "Yes", action: action)
     }
     
