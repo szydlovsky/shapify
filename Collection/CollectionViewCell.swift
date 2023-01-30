@@ -123,9 +123,7 @@ final class CollectionViewCell: UICollectionViewCell {
 
         artistLabel.text = tracks.first?.subtitle ?? ""
         artistLabel.textColor = labelColor
-
-        DispatchQueue.main.async { [weak self] in
-            self?.imageView.loadImage(urlString: tracks.first?.images?.coverart)
-        }
+        
+        imageView.loadImage(urlString: tracks.first?.images?.coverart)
     }
 }

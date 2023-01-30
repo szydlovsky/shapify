@@ -97,9 +97,7 @@ final class ResultsCollectionViewCell: UICollectionViewCell {
         
         spotifyLink = model.link
         
-        DispatchQueue.main.async { [weak self] in
-            self?.imageView.loadImage(urlString: model.image)
-        }
+        imageView.loadImage(urlString: model.image)
     }
     
     @objc private func playPressed() {

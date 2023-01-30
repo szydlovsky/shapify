@@ -50,16 +50,25 @@ extension UICollectionViewLayout {
 extension UIImageView {
     
     func loadImage(urlString: String?) {
-        self.image = UIImage(named: "collection")
+        DispatchQueue.main.async {
+            self.image = UIImage(named: "collection")
+        }
         
-        guard let url = URL(string: urlString ?? "") else {
+        guard let str = urlString,
+              let url = URL(string: str)
+        else {
             return
         }
         
-        if let data = try? Data(contentsOf: url) {
-            if let image = UIImage(data: data) {
+        URLSession.shared.dataTask(with: url) { data, _, _ in
+            guard let data = data,
+                  let image = UIImage(data: data)
+            else {
+                return
+            }
+            DispatchQueue.main.async {
                 self.image = image
             }
-        }
+        }.resume()
     }
 }

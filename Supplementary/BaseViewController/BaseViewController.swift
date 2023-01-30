@@ -24,7 +24,8 @@ class BaseViewController: UIViewController {
     
     @objc private func settingsTapped() {
         let settingsVC = SettingsViewController()
-        navigationController?.pushViewController(settingsVC, animated: true)
+        settingsVC.modalPresentationStyle = .pageSheet
+        self.present(settingsVC, animated: true)
     }
     
     func setUpSettingsBarButton() {
