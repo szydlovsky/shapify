@@ -19,7 +19,6 @@ final class AuthManager {
         static let redirectURI = "http://lvh.me"
         static let tokenBaseURL = "https://accounts.spotify.com/api/token"
         static let signInBaseURL = "https://accounts.spotify.com/authorize"
-        #warning("Need to change")
         static let scopes = "user-read-private%20playlist-modify-public%20user-read-email"
     }
     

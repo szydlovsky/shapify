@@ -56,6 +56,8 @@ final class SearchView: BaseView {
         $0.layer.cornerRadius = .screenWidth * 0.3
     }
     
+    private let notificationCenter = NotificationCenter.default
+    
     //MARK: - Lifecycle
     
     override init() {
@@ -63,7 +65,13 @@ final class SearchView: BaseView {
         setUp()
     }
     
+    deinit {
+        notificationCenter.removeObserver(self, name: NSNotification.Name("widgetTapped"), object: nil)
+    }
+    
     private func setUp() {
+        
+        notificationCenter.addObserver(self, selector: #selector(buttonPressed), name: NSNotification.Name("widgetTapped"), object: nil)
         backgroundColor = .shapifyLightBackground
         
         addSubviews([infoLabel, outerCircle, innerCircle, logoView])
