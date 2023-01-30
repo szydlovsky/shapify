@@ -51,7 +51,7 @@ extension UIImageView {
     
     func loadImage(urlString: String?) {
         DispatchQueue.main.async {
-            self.image = UIImage(named: "collection")
+            self.image = UIImage(named: "customerIcon")
         }
         
         guard let str = urlString,
