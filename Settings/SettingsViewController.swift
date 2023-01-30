@@ -24,7 +24,7 @@ class SettingsViewController: UIViewController {
     }
     
     @objc private func logOutPressed() {
-        let action = ProfileManager.shared.signOut
+        let action = AuthManager.shared.signOut
         self.showPopup(message: "Do you really want to log out?", buttonTitle: "Yes", action: action)
     }
     
