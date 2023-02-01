@@ -98,4 +98,8 @@ extension SearchViewController: SearchViewModelDelegate {
         vc.modalPresentationStyle = .pageSheet
         present(vc, animated: true)
     }
+    
+    func hasRecordingBeenStopped() -> Bool {
+        mainView.isCancelPressed
+    }
 }

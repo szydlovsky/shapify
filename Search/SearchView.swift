@@ -56,6 +56,13 @@ final class SearchView: BaseView {
         $0.layer.cornerRadius = .screenWidth * 0.3
     }
     
+    private let cancelButton = UIButton(type: .system).then {
+        $0.setUpRoundedButton(title: "Cancel")
+        $0.backgroundColor = .systemRed.withAlphaComponent(0.9)
+        $0.setWidth(.screenWidth * 0.7)
+        $0.isHidden = true
+    }
+    
     private let notificationCenter = NotificationCenter.default
     
     //MARK: - Lifecycle
@@ -74,7 +81,7 @@ final class SearchView: BaseView {
         notificationCenter.addObserver(self, selector: #selector(buttonPressed), name: NSNotification.Name("widgetTapped"), object: nil)
         backgroundColor = .shapifyLightBackground
         
-        addSubviews([infoLabel, outerCircle, innerCircle, logoView])
+        addSubviews([infoLabel, outerCircle, innerCircle, logoView, cancelButton])
         
         NSLayoutConstraint.activate([
             infoLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
@@ -89,7 +96,10 @@ final class SearchView: BaseView {
             innerCircle.centerYAnchor.constraint(equalTo: outerCircle.centerYAnchor),
             
             logoView.centerXAnchor.constraint(equalTo: centerXAnchor),
-            logoView.centerYAnchor.constraint(equalTo: outerCircle.centerYAnchor)
+            logoView.centerYAnchor.constraint(equalTo: outerCircle.centerYAnchor),
+            
+            cancelButton.centerXAnchor.constraint(equalTo: centerXAnchor),
+            cancelButton.topAnchor.constraint(equalTo: outerCircle.bottomAnchor, constant: Constants.defaultMargin)
         ])
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(buttonPressed)).then {
@@ -103,14 +113,16 @@ final class SearchView: BaseView {
         }
         logoView.addGestureRecognizer(longPress)
         
+        cancelButton.addTarget(self, action: #selector(cancelPressed), for: .touchUpInside)
+        
         $recordingOngoing.sink { [weak self] ongoing in
             guard let ongoing = ongoing else { return }
-            self?.isUserInteractionEnabled = !ongoing
+            self?.logoView.isUserInteractionEnabled = !ongoing
         }.store(in: &subs)
         
         $loadingOngoing.sink { [weak self] ongoing in
             guard let ongoing = ongoing else { return }
-            self?.isUserInteractionEnabled = !ongoing
+            self?.logoView.isUserInteractionEnabled = !ongoing
         }.store(in: &subs)
     }
     
@@ -126,6 +138,22 @@ final class SearchView: BaseView {
                   sender.state == .failed
         {
             endLongPressAnimation()
+        }
+    }
+    
+    @objc private func cancelPressed() {
+        isCancelPressed = true
+        infoLabel.text = "Canceling..."
+        enableCancelButton(false)
+    }
+    
+    private func enableCancelButton(_ enabled: Bool) {
+        if enabled {
+            cancelButton.isUserInteractionEnabled = true
+            cancelButton.backgroundColor = .systemRed.withAlphaComponent(0.9)
+        } else {
+            cancelButton.isUserInteractionEnabled = false
+            cancelButton.backgroundColor = .gray.withAlphaComponent(0.6)
         }
     }
     
@@ -147,6 +175,7 @@ final class SearchView: BaseView {
     
     @Published var recordingOngoing: Bool?
     private var recordingRepetitions: Int = 1
+    var isCancelPressed = false
     
     func setRecordingRepetitions(to amount: Int) {
         recordingRepetitions = amount
@@ -154,6 +183,9 @@ final class SearchView: BaseView {
     
     private func beginRecordAnimation() {
         recordingOngoing = true
+        cancelButton.isHidden = false
+        enableCancelButton(true)
+        isCancelPressed = false
         UIView.animate(withDuration: 0.5, animations: { [weak self] in
             let scale = 0.6 / 0.54
             self?.logoView.transform = CGAffineTransform(scaleX: scale, y: scale)
@@ -176,9 +208,12 @@ final class SearchView: BaseView {
                 self?.logoView.transform = CGAffineTransform(scaleX: 1, y: 1)
                 self?.outerCircle.backgroundColor = .shapifyDarkGreen
             }) { [weak self] _ in
-                self?.infoLabel.text = "Recognizing..."
+                self?.cancelButton.isHidden = true
+                self?.infoLabel.text = (self?.isCancelPressed ?? false) ? "Click to start recording..." : "Recognizing..."
                 self?.recordingOngoing = false
-                self?.startLoading()
+                if !(self?.isCancelPressed ?? false) {
+                    self?.startLoading()
+                }
             }
             return
         }

@@ -9,6 +9,7 @@ import AVFoundation
 protocol SearchViewModelDelegate: AnyObject {
     func showError(_ message: String)
     func showResults(_ viewModel: ResultsViewModel)
+    func hasRecordingBeenStopped() -> Bool
 }
 
 final class SearchViewModel {
@@ -47,6 +48,11 @@ final class SearchViewModel {
         recorder.stop()
         recorder = nil
         currentTracks = []
+        guard !(delegate?.hasRecordingBeenStopped() ?? true) else {
+            delegate?.showError("The recording has been canceled")
+            return
+        }
+        
         if #available(iOS 16, *) {
             let fileName = getDocumentsDirectory().appending(component: "file.m4a")
             if let data = try? Data(contentsOf: fileName) {
