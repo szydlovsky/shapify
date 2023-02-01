@@ -49,6 +49,7 @@ final class CollectionViewController: BaseViewController {
                 }
                 self.mainView.makeViewComponentsVisible(true)
                 self.mainView.reloadCollection()
+                self.mainView.setEmptyAppearance(self.viewModel.modelsCount == .zero)
             })
         }
     }

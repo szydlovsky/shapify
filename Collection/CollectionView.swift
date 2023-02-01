@@ -36,6 +36,16 @@ final class CollectionView: BaseView {
         $0.showsVerticalScrollIndicator = false
     }
     
+    private let emptyLabel = UILabel().then {
+        $0.translatesAutoresizingMaskIntoConstraints = false
+        $0.font = .appFont(ofSize: 24)
+        $0.textColor = .black
+        $0.textAlignment = .center
+        $0.text = "No results to be shown, record some music to see them here!"
+        $0.numberOfLines = 0
+        $0.isHidden = true
+    }
+    
     override init() {
         super.init()
         setUp()
@@ -44,7 +54,7 @@ final class CollectionView: BaseView {
     private func setUp() {
         backgroundColor = .shapifyLightBackground
         
-        addSubviews([infoLabel, collectionView])
+        addSubviews([infoLabel, collectionView, emptyLabel])
         NSLayoutConstraint.activate([
             infoLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
             infoLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: Constants.defaultMargin),
@@ -54,7 +64,11 @@ final class CollectionView: BaseView {
             collectionView.leadingAnchor.constraint(equalTo: leadingAnchor),
             collectionView.trailingAnchor.constraint(equalTo: trailingAnchor),
             collectionView.topAnchor.constraint(equalTo: infoLabel.bottomAnchor),
-            collectionView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor)
+            collectionView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
+            
+            emptyLabel.topAnchor.constraint(equalTo: infoLabel.bottomAnchor, constant: Constants.defaultMargin),
+            emptyLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: Constants.defaultMargin),
+            emptyLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -1 * Constants.defaultMargin)
         ])
     }
     
@@ -82,5 +96,10 @@ final class CollectionView: BaseView {
     func reloadCollection() {
         collectionView.reloadData()
         collectionView.setContentOffset(.zero, animated: false)
+    }
+    
+    func setEmptyAppearance(_ isEmpty: Bool) {
+        collectionView.isHidden = isEmpty
+        emptyLabel.isHidden = !isEmpty
     }
 }
