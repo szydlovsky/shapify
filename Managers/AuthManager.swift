@@ -196,6 +196,9 @@ final class AuthManager {
     }
     
     public func signOut() {
+        UserDefaults.standard.set(nil, forKey: "email")
+        UserDefaults.standard.set(nil, forKey: "username")
+        UserDefaults.standard.set(nil, forKey: "imageURL")
         UserDefaults.standard.set(nil, forKey: "expiration_date")
         UserDefaults.standard.set(nil, forKey: "access_token")
         UserDefaults.standard.set(nil, forKey: "refresh_token")
