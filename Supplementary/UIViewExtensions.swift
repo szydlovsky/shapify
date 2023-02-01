@@ -49,9 +49,9 @@ extension UICollectionViewLayout {
 
 extension UIImageView {
     
-    func loadImage(urlString: String?) {
+    func loadImage(urlString: String?, placeholder: UIImage = UIImage(named: "collection")!) {
         DispatchQueue.main.async {
-            self.image = UIImage(named: "customerIcon")
+            self.image = placeholder
         }
         
         guard let str = urlString,

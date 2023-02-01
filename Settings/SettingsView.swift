@@ -30,7 +30,7 @@ final class SettingsView: BaseView {
     
     private let profilePicture = UIImageView().then {
         $0.translatesAutoresizingMaskIntoConstraints = false
-        $0.loadImage(urlString: ProfileManager.shared.profile?.imageURL)
+        $0.loadImage(urlString: ProfileManager.shared.profile?.imageURL, placeholder: UIImage(named: "customerIcon")!)
         $0.setWidth(0.5 * .screenWidth)
         $0.setHeight(0.5 * .screenWidth)
         $0.layer.cornerRadius = 0.25 * .screenWidth

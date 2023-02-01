@@ -37,7 +37,7 @@ final class CollectionViewCell: UICollectionViewCell {
         $0.translatesAutoresizingMaskIntoConstraints = false
         $0.setWidth(cellWidth / 4)
         $0.setHeight(cellWidth / 4)
-        $0.contentMode = .scaleAspectFill
+        $0.contentMode = .scaleAspectFit
     }
     
     private let titleLabel = UILabel().then {

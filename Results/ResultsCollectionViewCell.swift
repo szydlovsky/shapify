@@ -23,7 +23,7 @@ final class ResultsCollectionViewCell: UICollectionViewCell {
         $0.translatesAutoresizingMaskIntoConstraints = false
         $0.setWidth(cellSize / 3)
         $0.setHeight(cellSize / 3)
-        $0.contentMode = .scaleAspectFill
+        $0.contentMode = .scaleAspectFit
     }
     
     private let titleLabel = UILabel().then {
